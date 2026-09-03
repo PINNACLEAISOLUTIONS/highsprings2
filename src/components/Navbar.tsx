@@ -10,43 +10,67 @@ interface NavbarProps {
 export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  // Clean nav links without "Find a Doctor"
   const navLinks = [
-    { label: 'Find a Doctor', href: '#physicians', active: true },
-    { label: 'Pediatric Care', href: '#services' },
-    { label: 'Adult Primary Care', href: '#services' },
+    { label: 'Pediatric Care', href: '#services', filter: 'pediatric' },
+    { label: 'Adult Primary Care', href: '#services', filter: 'adult' },
+    { label: 'Our Physicians', href: '#physicians' },
     { label: 'Patient Forms (PDF)', href: '#forms' },
     { label: 'Insurance Plans', href: '#insurance' },
     { label: 'Location & Facility', href: '#facility' },
     { label: 'Appointments', href: '#contact' },
   ]
 
+  // Reliable smooth scroll handler that always navigates to the right page section
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, filter?: string) => {
+    e.preventDefault()
+    setMobileMenuOpen(false)
+
+    if (filter) {
+      window.dispatchEvent(new CustomEvent('switch-service-tab', { detail: filter }))
+    }
+
+    const targetId = href.replace('#', '')
+    setTimeout(() => {
+      const el = document.getElementById(targetId)
+      if (el) {
+        const yOffset = -72 // accounts for sticky header
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
+        window.scrollTo({ top: y, behavior: 'smooth' })
+      }
+    }, 120)
+  }
+
   return (
     <header className="sticky top-0 z-50 shadow-2xl">
       {/* ── Primary Brand Header (UF Deep Navy #002147) ── */}
-      <div className="bg-[#002147] border-b border-white/10 py-2.5 sm:py-3.5 px-3 sm:px-6">
-        <div className="site-container flex items-center justify-between gap-2 sm:gap-6">
-          {/* Brand Logo & Name */}
-          <a href="#home" className="flex items-center gap-2 sm:gap-3.5 group min-w-0 flex-1 sm:flex-initial" aria-label="High Springs Pediatrics & Primary Care">
+      <div className="bg-[#002147] border-b border-white/10 py-2.5 sm:py-3.5 px-2 sm:px-6">
+        <div className="site-container flex items-center justify-between gap-1.5 sm:gap-6">
+          {/* Brand Logo & Name (Star shifted left on mobile, no "North Florida") */}
+          <a
+            href="#home"
+            onClick={(e) => handleNavClick(e, '#home')}
+            className="flex items-center gap-1.5 sm:gap-3 group min-w-0 flex-1 sm:flex-initial pl-0.5"
+            aria-label="High Springs Pediatrics & Adult Primary Care"
+          >
             <ClinicLogoEmblem />
             <div className="flex flex-col justify-center min-w-0">
-              <div className="font-extrabold text-base sm:text-xl md:text-2xl lg:text-3xl tracking-tight leading-tight text-white truncate sm:overflow-visible sm:whitespace-nowrap">
+              <div className="font-black text-base sm:text-xl md:text-2xl lg:text-3xl tracking-tight leading-none text-white whitespace-nowrap">
                 High Springs <span className="text-[#38bdf8]">Pediatrics</span>
               </div>
-              <div className="text-[9px] sm:text-xs font-bold text-slate-300 tracking-wider uppercase flex items-center gap-1 sm:gap-1.5 truncate sm:overflow-visible sm:whitespace-nowrap">
-                <span>&amp; Adult Primary Care</span>
-                <span className="text-[#38bdf8]">&bull;</span>
-                <span className="text-slate-300 font-extrabold">North Florida</span>
+              <div className="text-[10px] sm:text-xs font-semibold text-slate-300 tracking-wide uppercase mt-0.5 whitespace-nowrap">
+                &amp; Adult Primary Care
               </div>
             </div>
           </a>
 
           {/* Right Action Phone & Mobile Hamburger */}
           <div className="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
-            {/* Mobile Call Button: Modern Oceanic Capsule (Zero overlap, no red) */}
+            {/* Mobile Call Button: Modern Oceanic Capsule (Clean white icon, no red) */}
             <a
               href={phoneTel}
               aria-label={`Call office at ${phone}`}
-              className="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-[#00529b] to-[#0072ce] hover:from-[#00427c] hover:to-[#005da8] text-white text-xs font-bold shadow-md border border-white/20 active:scale-95 transition-all"
+              className="sm:hidden inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-[#00529b] to-[#0072ce] hover:from-[#00427c] hover:to-[#005da8] text-white text-xs font-bold shadow-md border border-white/20 active:scale-95 transition-all"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <span>Call</span>
@@ -78,7 +102,7 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
         </div>
       </div>
 
-      {/* ── Secondary Navigation Bar (Direct UF Health style) ── */}
+      {/* ── Secondary Navigation Bar (Desktop Only) ── */}
       <div className="hidden lg:block bg-[#00529b] border-t border-white/15 px-4 py-1.5 shadow-md">
         <div className="site-container flex items-center justify-between">
           <nav className="flex items-center gap-1 text-xs font-semibold text-white">
@@ -86,11 +110,8 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
               <a
                 key={link.label}
                 href={link.href}
-                className={`px-3.5 py-2 rounded-lg transition-all ${
-                  link.active
-                    ? 'bg-white text-[#00529b] font-bold shadow-sm'
-                    : 'text-white/95 hover:bg-white/15 hover:text-white'
-                }`}
+                onClick={(e) => handleNavClick(e, link.href, link.filter)}
+                className="px-3.5 py-2 rounded-lg text-white/95 hover:bg-white/15 hover:text-white transition-all cursor-pointer"
               >
                 {link.label}
               </a>
@@ -104,7 +125,7 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
         </div>
       </div>
 
-      {/* ── Mobile Drawer ── */}
+      {/* ── Mobile Drawer (Reliable Instant Navigation) ── */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -119,8 +140,8 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
                 <a
                   key={link.label}
                   href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center justify-between p-3 rounded-xl bg-[#002147] hover:bg-[#00529b] text-xs font-semibold text-white border border-white/10 transition-all"
+                  onClick={(e) => handleNavClick(e, link.href, link.filter)}
+                  className="flex items-center justify-between p-3 rounded-xl bg-[#002147] hover:bg-[#00529b] text-xs font-semibold text-white border border-white/10 transition-all cursor-pointer"
                 >
                   <span>{link.label}</span>
                   <span className="text-slate-400 text-[10px]">&rarr;</span>
@@ -138,8 +159,8 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
               </a>
               <a
                 href="#contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="btn-uf-orange flex items-center justify-center py-3 rounded-xl text-white text-xs font-bold shadow-md"
+                onClick={(e) => handleNavClick(e, '#contact')}
+                className="btn-uf-orange flex items-center justify-center py-3 rounded-xl text-white text-xs font-bold shadow-md cursor-pointer"
               >
                 Request an Appointment
               </a>

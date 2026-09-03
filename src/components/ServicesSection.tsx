@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'motion/react'
 import newbornCareImg from '../assets/newborn_care.jpg'
 import primaryFamilyCareImg from '../assets/primary_family_care.jpg'
@@ -7,6 +7,16 @@ import diagnosticLabsImg from '../assets/diagnostic_labs.jpg'
 
 export const ServicesSection = () => {
   const [activeTab, setActiveTab] = useState<'all' | 'pediatric' | 'adult' | 'diagnostics'>('all')
+
+  useEffect(() => {
+    const handleSwitch = (e: CustomEvent) => {
+      if (e.detail && ['all', 'pediatric', 'adult', 'diagnostics'].includes(e.detail)) {
+        setActiveTab(e.detail)
+      }
+    }
+    window.addEventListener('switch-service-tab' as any, handleSwitch)
+    return () => window.removeEventListener('switch-service-tab' as any, handleSwitch)
+  }, [])
 
   const services = [
     {
