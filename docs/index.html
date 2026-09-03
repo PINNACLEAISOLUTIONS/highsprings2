@@ -1,14 +1,97 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en" class="dark scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>High Springs Pediatrics & Primary Care</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>High Springs Pediatrics &amp; Adult Primary Care | Dr. Nasir Ahmed &amp; Dr. Ramin Ahmad</title>
+    <meta name="title" content="High Springs Pediatrics &amp; Adult Primary Care | Dr. Nasir Ahmed &amp; Dr. Ramin Ahmad" />
+    <meta name="description" content="Compassionate, comprehensive healthcare for children, adults, and seniors in High Springs, Florida. Founding pediatrician Dr. Nasir Ahmed, M.D. and internal medicine specialist Dr. Ramin Ahmad, M.D. Same-day sick visits, newborn checkups, and on-site testing." />
+    <meta name="keywords" content="High Springs Pediatrics, High Springs Doctor, Dr Nasir Ahmed, Dr Ramin Ahmad, Pediatrician High Springs FL, Primary Care High Springs, Internal Medicine, Child Vaccinations, Florida Medicaid Doctor" />
+    <meta name="author" content="High Springs Pediatrics &amp; Primary Care" />
+    <meta name="theme-color" content="#0b162c" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pinnacleaisolutions.github.io/highspringspediatricwebsite/" />
+    <meta property="og:title" content="High Springs Pediatrics &amp; Adult Primary Care" />
+    <meta property="og:description" content="Dedicated, multi-generational medical care for families in High Springs and North Central Florida. Same-day sick visits, newborn checks, and adult wellness." />
+    <meta property="og:image" content="./assets/clinic_exterior.jpg" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="High Springs Pediatrics &amp; Adult Primary Care" />
+    <meta name="twitter:description" content="Compassionate healthcare from birth to seniors in High Springs, FL. Led by Dr. Nasir Ahmed and Dr. Ramin Ahmad." />
+    <meta name="twitter:image" content="./assets/clinic_exterior.jpg" />
+
+    <!-- Geo Meta Tags for Local Florida SEO -->
+    <meta name="geo.region" content="US-FL" />
+    <meta name="geo.placename" content="High Springs" />
+    <meta name="geo.position" content="29.8277;-82.5968" />
+    <meta name="ICBM" content="29.8277, -82.5968" />
+
+    <!-- Premium Google Typography: Outfit (Warm friendly headings) & Plus Jakarta Sans (Clean clinical body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Schema.org JSON-LD Structured Data for Medical Clinic -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "High Springs Pediatrics & Adult Primary Care",
+      "image": "https://pinnacleaisolutions.github.io/highspringspediatricwebsite/assets/clinic_exterior.jpg",
+      "@id": "https://pinnacleaisolutions.github.io/highspringspediatricwebsite/",
+      "url": "https://pinnacleaisolutions.github.io/highspringspediatricwebsite/",
+      "telephone": "+13864541156",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "19228 NW US Highway 441",
+        "addressLocality": "High Springs",
+        "addressRegion": "FL",
+        "postalCode": "32643",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 29.8277,
+        "longitude": -82.5968
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ],
+      "medicalSpecialty": [
+        "Pediatrics",
+        "PrimaryCare",
+        "InternalMedicine"
+      ],
+      "physician": [
+        {
+          "@type": "Physician",
+          "name": "Dr. Nasir Ahmed, M.D.",
+          "medicalSpecialty": "Pediatrics"
+        },
+        {
+          "@type": "Physician",
+          "name": "Dr. Ramin Ahmad, M.D.",
+          "medicalSpecialty": "InternalMedicine"
+        }
+      ]
+    }
+    </script>
     <script type="module" crossorigin src="./assets/index.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index.css">
   </head>
-  <body class="bg-[#070e1f] text-slate-100">
+  <body class="bg-[#0b162c] text-slate-100 selection:bg-sky-500 selection:text-white antialiased font-sans">
     <div id="root"></div>
   </body>
 </html>

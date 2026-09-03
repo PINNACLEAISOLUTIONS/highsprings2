@@ -1,92 +1,77 @@
-/* Symmetrical Responsive Layout Utilities */
-html {
-  scroll-behavior: smooth;
-}
+/* ── Senior-Grade Anti-Slop Component Styling ───────────── */
 
-body {
-  background-color: #070e1f !important;
-  color: #f1f5f9;
-  overflow-x: hidden;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-}
-
-.site-container {
-  width: 100% !important;
-  max-width: 1200px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
-  box-sizing: border-box !important;
-}
-
-.section-wrapper {
-  width: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  box-sizing: border-box !important;
-}
-
-/* 3D Pop & Card Elevation Effects */
-.card-3d-box {
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease !important;
+/* Refined 3D Card Hover - Natural, subtle, and responsive */
+.med-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
   will-change: transform, box-shadow;
-  transform-style: preserve-3d;
 }
 
-.card-3d-box:hover {
-  transform: translateY(-8px) scale(1.02) !important;
-  box-shadow: 0 25px 50px -10px rgba(14, 165, 233, 0.35), 0 0 25px 2px rgba(56, 189, 248, 0.2) !important;
-  border-color: rgba(56, 189, 248, 0.6) !important;
+.med-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(2, 132, 199, 0.15),
+              0 0 15px 1px rgba(56, 189, 248, 0.1);
+  border-color: rgba(56, 189, 248, 0.4);
 }
 
-.card-3d-box:active {
-  transform: scale(0.985) !important;
+.med-card:active {
+  transform: scale(0.99);
 }
 
-/* Smooth zoom for images inside 3D boxes */
-.card-3d-box .zoom-img {
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+/* Image zoom inside cards */
+.med-card .med-img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.card-3d-box:hover .zoom-img {
-  transform: scale(1.08) !important;
+.med-card:hover .med-img {
+  transform: scale(1.05);
 }
 
-/* ── Floating Light Bubbles across Clinic Photo ── */
-.bubble-container {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 15;
+/* Clean Button Micro-interactions */
+.btn-primary {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.light-bubble {
-  position: absolute;
-  bottom: -40px;
-  background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.85), rgba(186, 230, 253, 0.5) 45%, rgba(56, 189, 248, 0.2) 75%, transparent 100%);
-  border: 1px solid rgba(255, 255, 255, 0.65);
-  border-radius: 50%;
-  box-shadow: 0 0 12px rgba(56, 189, 248, 0.5), inset 0 0 6px rgba(255, 255, 255, 0.8);
-  animation: floatBubbleUp linear infinite;
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.4);
 }
 
-@keyframes floatBubbleUp {
-  0% {
-    transform: translateY(0) translateX(0) scale(0.7);
-    opacity: 0;
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+/* Live Open / Closed pulse */
+@keyframes statusPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
   }
-  15% {
-    opacity: 0.75;
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
   }
-  85% {
-    opacity: 0.75;
-  }
-  100% {
-    transform: translateY(-400px) translateX(30px) scale(1.15);
-    opacity: 0;
-  }
+}
+
+.status-dot-pulse {
+  animation: statusPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060b17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e3a68;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
 }
