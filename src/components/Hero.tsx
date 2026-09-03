@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { motion } from 'motion/react'
 import heroUfImg from '../assets/hero_uf_blend@2x.png'
 
@@ -8,32 +7,13 @@ interface HeroProps {
 }
 
 export const Hero = ({ phone, phoneTel }: HeroProps) => {
-  const [searchVal, setSearchVal] = useState('')
-
-  const handleHeroSearch = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!searchVal.trim()) return
-    const q = searchVal.toLowerCase()
-    if (q.includes('form') || q.includes('pdf') || q.includes('pack')) {
-      window.location.hash = '#forms'
-    } else if (q.includes('child') || q.includes('pedia') || q.includes('nasir')) {
-      window.location.hash = '#physicians'
-    } else if (q.includes('adult') || q.includes('ramin') || q.includes('intern')) {
-      window.location.hash = '#physicians'
-    } else if (q.includes('insur') || q.includes('blue') || q.includes('medica')) {
-      window.location.hash = '#insurance'
-    } else {
-      window.location.hash = '#services'
-    }
-  }
-
   return (
-    <section id="home" className="relative bg-gradient-to-r from-[#072c56] via-[#093566] to-[#143963] text-white pt-8 sm:pt-12 lg:pt-14 pb-0 overflow-hidden border-b border-white/10">
+    <section id="home" className="relative bg-gradient-to-r from-[#072c56] via-[#093566] to-[#143963] text-white pt-6 sm:pt-10 lg:pt-12 pb-0 overflow-hidden border-b border-white/10">
       <div className="site-container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-end">
-          {/* Left Column: Search & Text (Direct UF Health style) */}
-          <div className="lg:col-span-7 pb-8 lg:pb-16 text-left">
-            {/* UF Health-style Location Tag */}
+          {/* Left Column: Authentic Clinic Headline & Actions */}
+          <div className="lg:col-span-7 pb-8 lg:pb-14 text-left">
+            {/* Location Tag */}
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -44,88 +24,83 @@ export const Hero = ({ phone, phoneTel }: HeroProps) => {
               <span className="truncate">19228 NW US Hwy 441, High Springs &bull; Accepting New Patients</span>
             </motion.div>
 
-            {/* Main Headline */}
+            {/* Primary Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] mb-2.5"
+              className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12] mb-3.5 max-w-2xl"
             >
-              Find a Doctor
+              Compassionate Family Healthcare{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-teal-200 to-sky-100">
+                For Every Generation
+              </span>
             </motion.h1>
 
-            {/* Subtitle */}
+            {/* Reassuring Subtitle */}
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.18 }}
-              className="text-base sm:text-lg text-slate-200 leading-relaxed mb-6 font-normal max-w-xl"
+              className="text-sm sm:text-base lg:text-lg text-slate-200 leading-relaxed mb-6 font-normal max-w-xl"
             >
-              Find the health care partner that&apos;s right for you and your family.
+              Led by founding pediatrician <strong>Dr. Nasir Ahmed, M.D.</strong> and internal medicine physician <strong>Dr. Ramin Ahmad, M.D.</strong> Dedicated newborn checkups, adolescent care, and comprehensive adult primary medicine under one roof in High Springs.
             </motion.p>
 
-            {/* UF Health Search Input Pill */}
-            <motion.form
+            {/* Direct Action Buttons */}
+            <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.25 }}
-              onSubmit={handleHeroSearch}
-              className="relative flex items-center w-full max-w-xl bg-white rounded-full p-1.5 pl-5 sm:pl-6 shadow-2xl border border-white/20 mb-6"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto mb-6"
             >
-              <input
-                type="text"
-                value={searchVal}
-                onChange={(e) => setSearchVal(e.target.value)}
-                placeholder="Name, specialty or subject"
-                className="w-full text-sm sm:text-base text-slate-800 placeholder:text-slate-500 font-medium outline-none bg-transparent pr-3"
-              />
-              <button
-                type="submit"
-                className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#005598] hover:bg-[#004277] text-white flex items-center justify-center flex-shrink-0 transition-colors shadow-md cursor-pointer"
-                aria-label="Search doctors"
+              <a
+                href="#contact"
+                className="btn-uf-orange inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-white font-bold text-sm sm:text-base shadow-lg shadow-orange-950/20 whitespace-nowrap cursor-pointer transition-all"
               >
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              </button>
-            </motion.form>
+                <span>Request an Appointment</span>
+                <span>&rarr;</span>
+              </a>
+              <a
+                href={phoneTel}
+                className="btn-uf-primary inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-white font-bold text-sm sm:text-base border border-white/20 shadow-md whitespace-nowrap cursor-pointer transition-all tabular-nums"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-[#f47321]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>Call: {phone}</span>
+              </a>
+            </motion.div>
 
-            {/* Quick Action Badges */}
+            {/* Quick Badges */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.32 }}
               className="flex flex-wrap items-center gap-2 text-xs"
             >
-              <span className="text-slate-300 font-medium mr-1">Popular:</span>
               <a
                 href="#physicians"
-                className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium transition-colors"
+                className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-white font-medium transition-colors"
               >
-                Dr. Nasir Ahmed (Pediatrics)
+                👶 Dr. Nasir Ahmed (Pediatrics)
               </a>
               <a
                 href="#physicians"
-                className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium transition-colors"
+                className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-white font-medium transition-colors"
               >
-                Dr. Ramin Ahmad (Adult Care)
+                🩺 Dr. Ramin Ahmad (Adult Care)
               </a>
               <a
                 href="#forms"
-                className="px-3 py-1.5 rounded-full bg-[#f47321]/20 hover:bg-[#f47321]/30 border border-[#f47321]/40 text-orange-200 font-bold transition-colors"
+                className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-sky-200 font-semibold transition-colors"
               >
-                Registration Forms (PDF)
-              </a>
-              <a
-                href={phoneTel}
-                className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium transition-colors hidden sm:inline-block tabular-nums"
-              >
-                Call: {phone}
+                📄 Intake Forms (PDF)
               </a>
             </motion.div>
           </div>
 
-          {/* Right Column: Doctor & Patient Photo (Direct blend from screenshot) */}
+          {/* Right Column: Doctor & Patient Photo Blend */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-5 flex justify-center lg:justify-end items-end relative overflow-hidden"
@@ -133,8 +108,8 @@ export const Hero = ({ phone, phoneTel }: HeroProps) => {
             <div className="relative w-full max-w-lg lg:max-w-none flex justify-center lg:justify-end">
               <img
                 src={heroUfImg}
-                alt="Doctor consulting with patient in clinic"
-                className="w-full max-w-[520px] h-auto object-contain object-bottom filter drop-shadow-2xl"
+                alt="Doctor consulting with patient in High Springs clinic"
+                className="w-full max-w-[500px] h-auto object-contain object-bottom filter drop-shadow-2xl"
               />
             </div>
           </motion.div>
