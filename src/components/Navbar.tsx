@@ -9,26 +9,6 @@ interface NavbarProps {
 
 export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [searchQuery, setSearchQuery] = useState('')
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!searchQuery.trim()) return
-    const q = searchQuery.toLowerCase()
-    if (q.includes('form') || q.includes('pdf') || q.includes('packet')) {
-      window.location.hash = '#forms'
-    } else if (q.includes('doc') || q.includes('ahmed') || q.includes('pediatrician') || q.includes('physician')) {
-      window.location.hash = '#physicians'
-    } else if (q.includes('insur') || q.includes('blue') || q.includes('medicare') || q.includes('medicaid')) {
-      window.location.hash = '#insurance'
-    } else if (q.includes('facil') || q.includes('map') || q.includes('locat') || q.includes('park')) {
-      window.location.hash = '#facility'
-    } else if (q.includes('appoint') || q.includes('contact') || q.includes('call') || q.includes('hour')) {
-      window.location.hash = '#contact'
-    } else {
-      window.location.hash = '#services'
-    }
-  }
 
   const navLinks = [
     { label: 'Find a Doctor', href: '#physicians', active: true },
@@ -42,26 +22,7 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
 
   return (
     <header className="sticky top-0 z-50 shadow-2xl">
-      {/* ── 1. Top Institutional Utility Bar (UF Health Style) ── */}
-      <div className="bg-[#001736] border-b border-white/10 text-xs py-1.5 px-4 text-slate-300">
-        <div className="site-container flex items-center justify-between gap-4">
-          <div className="flex items-center gap-2 text-[11px]">
-            <span className="text-[#f47321]">📍</span>
-            <span className="font-semibold text-white">19228 NW US Highway 441, High Springs, FL</span>
-          </div>
-          <div className="flex items-center gap-4 text-[11px]">
-            <a href="#forms" className="hover:text-white transition-colors hidden sm:inline">
-              Download Intake Packets
-            </a>
-            <span className="text-slate-600 hidden sm:inline">|</span>
-            <a href={phoneTel} className="font-bold text-[#f47321] hover:text-[#fb923c] tabular-nums transition-colors">
-              Call Office: {phone}
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* ── 2. Primary Brand & Search Bar Header (UF Deep Navy #002147) ── */}
+      {/* ── Primary Brand Header (UF Deep Navy #002147) ── */}
       <div className="bg-[#002147] border-b border-white/10 py-3.5 px-4">
         <div className="site-container flex items-center justify-between gap-4 sm:gap-6">
           {/* Brand Logo & Name */}
@@ -78,27 +39,6 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
               </div>
             </div>
           </a>
-
-          {/* Quick Search Pill (Direct UF Health style) */}
-          <form
-            onSubmit={handleSearch}
-            className="hidden md:flex items-center bg-white rounded-full p-1 pl-4 shadow-lg border border-slate-200 w-full max-w-md"
-          >
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Find doctors, conditions, forms..."
-              className="w-full text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 outline-none bg-transparent"
-            />
-            <button
-              type="submit"
-              className="w-8 h-8 rounded-full bg-[#00529b] hover:bg-[#004182] text-white flex items-center justify-center flex-shrink-0 transition-colors shadow-sm cursor-pointer"
-              aria-label="Search site"
-            >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            </button>
-          </form>
 
           {/* Right Action Phone & Mobile Hamburger */}
           <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
@@ -162,20 +102,6 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
             transition={{ duration: 0.2 }}
             className="lg:hidden border-t border-slate-700 bg-[#001736] px-4 py-5 shadow-2xl overflow-hidden"
           >
-            {/* Mobile Search */}
-            <form onSubmit={handleSearch} className="flex items-center bg-white rounded-full p-1 pl-3.5 mb-4">
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search doctors, services, forms..."
-                className="w-full text-xs text-slate-900 outline-none"
-              />
-              <button type="submit" className="w-7 h-7 rounded-full bg-[#00529b] text-white flex items-center justify-center flex-shrink-0">
-                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              </button>
-            </form>
-
             <div className="grid grid-cols-2 gap-2 mb-4">
               {navLinks.map((link) => (
                 <a

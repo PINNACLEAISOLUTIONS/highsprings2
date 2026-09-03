@@ -38,10 +38,10 @@ export const Hero = ({ phone, phoneTel }: HeroProps) => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-sky-200 text-xs font-semibold mb-4"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-sky-200 text-xs font-semibold mb-4"
             >
-              <span className="w-2 h-2 rounded-full bg-[#f47321] status-dot-pulse" />
-              <span>High Springs Pediatrics &amp; Adult Primary Care</span>
+              <span className="text-[#f47321]">📍</span>
+              <span className="truncate">19228 NW US Hwy 441, High Springs &bull; Accepting New Patients</span>
             </motion.div>
 
             {/* Main Headline */}
