@@ -24,33 +24,45 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
     <header className="sticky top-0 z-50 shadow-2xl">
       {/* ── Primary Brand Header (UF Deep Navy #002147) ── */}
       <div className="bg-[#002147] border-b border-white/10 py-2.5 sm:py-3.5 px-3 sm:px-6">
-        <div className="site-container flex items-center justify-between gap-3 sm:gap-6">
+        <div className="site-container flex items-center justify-between gap-2 sm:gap-6">
           {/* Brand Logo & Name */}
-          <a href="#home" className="flex items-center gap-2.5 sm:gap-3.5 group min-w-0" aria-label="High Springs Pediatrics & Primary Care">
+          <a href="#home" className="flex items-center gap-2 sm:gap-3.5 group min-w-0 flex-1 sm:flex-initial" aria-label="High Springs Pediatrics & Primary Care">
             <ClinicLogoEmblem />
             <div className="flex flex-col justify-center min-w-0">
-              <div className="font-extrabold text-lg sm:text-2xl md:text-3xl tracking-tight leading-tight whitespace-nowrap text-white">
+              <div className="font-extrabold text-base sm:text-xl md:text-2xl lg:text-3xl tracking-tight leading-tight text-white truncate sm:overflow-visible sm:whitespace-nowrap">
                 High Springs <span className="text-[#38bdf8]">Pediatrics</span>
               </div>
-              <div className="text-[10px] sm:text-xs font-bold text-slate-300 tracking-wider uppercase whitespace-nowrap flex items-center gap-1 sm:gap-1.5">
+              <div className="text-[9px] sm:text-xs font-bold text-slate-300 tracking-wider uppercase flex items-center gap-1 sm:gap-1.5 truncate sm:overflow-visible sm:whitespace-nowrap">
                 <span>&amp; Adult Primary Care</span>
-                <span className="text-[#f47321]">&bull;</span>
-                <span className="text-[#f47321] font-extrabold">North Florida</span>
+                <span className="text-[#38bdf8]">&bull;</span>
+                <span className="text-slate-300 font-extrabold">North Florida</span>
               </div>
             </div>
           </a>
 
           {/* Right Action Phone & Mobile Hamburger */}
-          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
+            {/* Mobile Call Button: Modern Oceanic Capsule (Zero overlap, no red) */}
             <a
               href={phoneTel}
-              className="btn-primary inline-flex items-center gap-1.5 sm:gap-2 px-3.5 py-2 sm:px-5 sm:py-2.5 rounded-full bg-[#00529b] hover:bg-[#004182] text-white text-xs sm:text-sm font-bold shadow-md whitespace-nowrap border border-white/20"
+              aria-label={`Call office at ${phone}`}
+              className="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-[#00529b] to-[#0072ce] hover:from-[#00427c] hover:to-[#005da8] text-white text-xs font-bold shadow-md border border-white/20 active:scale-95 transition-all"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#f47321]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <span className="hidden sm:inline tabular-nums">{phone}</span>
-              <span className="sm:hidden font-bold">Call Clinic</span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Call</span>
             </a>
 
+            {/* Desktop Call Button: Ultra-Modern Gradient Pill with Live Pulse Dot & Clean White Icon (No red) */}
+            <a
+              href={phoneTel}
+              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-gradient-to-r from-[#00529b] via-[#0060b2] to-[#0072ce] hover:from-[#00427c] hover:via-[#005096] hover:to-[#005da8] text-white text-xs sm:text-sm font-bold shadow-lg shadow-sky-950/25 whitespace-nowrap border border-white/20 transition-all hover:scale-[1.02] active:scale-98"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-400 status-dot-pulse flex-shrink-0" />
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-white flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span className="tabular-nums">{phone}</span>
+            </a>
+
+            {/* Mobile Hamburger Menu */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden p-2 rounded-xl bg-[#001736] text-slate-200 hover:text-white border border-slate-700/80 transition-colors cursor-pointer"
@@ -66,7 +78,7 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
         </div>
       </div>
 
-      {/* ── 3. UF Blue Secondary Navigation Bar (Direct UF Health style) ── */}
+      {/* ── Secondary Navigation Bar (Direct UF Health style) ── */}
       <div className="hidden lg:block bg-[#00529b] border-t border-white/15 px-4 py-1.5 shadow-md">
         <div className="site-container flex items-center justify-between">
           <nav className="flex items-center gap-1 text-xs font-semibold text-white">
@@ -84,15 +96,15 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
               </a>
             ))}
           </nav>
-          
-          <div className="text-[11px] font-semibold text-sky-100 flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+
+          <div className="flex items-center gap-3 text-xs text-sky-100 font-medium">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 status-dot-pulse" />
             <span>Walk-In Sick Visits Welcome</span>
           </div>
         </div>
       </div>
 
-      {/* Mobile Slide-Down Menu */}
+      {/* ── Mobile Drawer ── */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -111,24 +123,25 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
                   className="flex items-center justify-between p-3 rounded-xl bg-[#002147] hover:bg-[#00529b] text-xs font-semibold text-white border border-white/10 transition-all"
                 >
                   <span>{link.label}</span>
-                  <span className="text-[#f47321]">&rarr;</span>
+                  <span className="text-slate-400 text-[10px]">&rarr;</span>
                 </a>
               ))}
             </div>
 
-            <div className="space-y-2 pt-3 border-t border-slate-700">
+            <div className="pt-3 border-t border-slate-700 flex flex-col gap-2.5">
               <a
                 href={phoneTel}
-                className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[#00529b] hover:bg-[#004182] text-white font-bold text-sm shadow-md"
+                className="btn-uf-primary flex items-center justify-center gap-2 py-3 rounded-xl text-white text-xs font-bold shadow-md"
               >
-                Call Office: {phone}
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>Call Clinic Desk: {phone}</span>
               </a>
               <a
-                href="#forms"
+                href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-slate-900 text-slate-200 text-xs font-semibold border border-slate-800"
+                className="btn-uf-orange flex items-center justify-center py-3 rounded-xl text-white text-xs font-bold shadow-md"
               >
-                Download Patient Forms (PDF)
+                Request an Appointment
               </a>
             </div>
           </motion.div>
