@@ -23,16 +23,16 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
   return (
     <header className="sticky top-0 z-50 shadow-2xl">
       {/* ── Primary Brand Header (UF Deep Navy #002147) ── */}
-      <div className="bg-[#002147] border-b border-white/10 py-3.5 px-4">
-        <div className="site-container flex items-center justify-between gap-4 sm:gap-6">
+      <div className="bg-[#002147] border-b border-white/10 py-2.5 sm:py-3.5 px-3 sm:px-6">
+        <div className="site-container flex items-center justify-between gap-3 sm:gap-6">
           {/* Brand Logo & Name */}
-          <a href="#home" className="flex items-center gap-3.5 group min-w-0" aria-label="High Springs Pediatrics & Primary Care">
+          <a href="#home" className="flex items-center gap-2.5 sm:gap-3.5 group min-w-0" aria-label="High Springs Pediatrics & Primary Care">
             <ClinicLogoEmblem />
             <div className="flex flex-col justify-center min-w-0">
-              <div className="font-extrabold text-xl sm:text-2xl md:text-3xl tracking-tight leading-tight whitespace-nowrap text-white">
+              <div className="font-extrabold text-lg sm:text-2xl md:text-3xl tracking-tight leading-tight whitespace-nowrap text-white">
                 High Springs <span className="text-[#38bdf8]">Pediatrics</span>
               </div>
-              <div className="text-[10px] sm:text-xs font-bold text-slate-300 tracking-wider uppercase whitespace-nowrap flex items-center gap-1.5">
+              <div className="text-[10px] sm:text-xs font-bold text-slate-300 tracking-wider uppercase whitespace-nowrap flex items-center gap-1 sm:gap-1.5">
                 <span>&amp; Adult Primary Care</span>
                 <span className="text-[#f47321]">&bull;</span>
                 <span className="text-[#f47321] font-extrabold">North Florida</span>
@@ -44,22 +44,22 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
           <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
             <a
               href={phoneTel}
-              className="btn-primary inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-[#00529b] hover:bg-[#004182] text-white text-xs sm:text-sm font-bold shadow-md whitespace-nowrap border border-white/20"
+              className="btn-primary inline-flex items-center gap-1.5 sm:gap-2 px-3.5 py-2 sm:px-5 sm:py-2.5 rounded-full bg-[#00529b] hover:bg-[#004182] text-white text-xs sm:text-sm font-bold shadow-md whitespace-nowrap border border-white/20"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-[#f47321]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#f47321]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <span className="hidden sm:inline tabular-nums">{phone}</span>
-              <span className="sm:hidden">Call Clinic</span>
+              <span className="sm:hidden font-bold">Call Clinic</span>
             </a>
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-xl bg-[#001736] text-slate-200 hover:text-white border border-slate-700/80 transition-colors"
+              className="lg:hidden p-2 rounded-xl bg-[#001736] text-slate-200 hover:text-white border border-slate-700/80 transition-colors cursor-pointer"
               aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
             >
               {mobileMenuOpen ? (
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
               ) : (
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
               )}
             </button>
           </div>

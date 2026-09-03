@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import ClinicStatusBanner from './components/ClinicStatusBanner'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import StatsBar from './components/StatsBar'
@@ -29,9 +28,6 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 flex flex-col w-full pb-16 md:pb-0 font-sans selection:bg-[#00529b] selection:text-white">
-      {/* Real-time Office Hours & Emergency Banner */}
-      <ClinicStatusBanner />
-
       {/* Modern Sticky Navigation */}
       <Navbar phone={CLINIC.phone} phoneTel={CLINIC.phoneTel} />
 
