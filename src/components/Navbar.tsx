@@ -64,19 +64,9 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
             </div>
           </a>
 
-          {/* Right Action Phone & Mobile Hamburger */}
-          <div className="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
-            {/* Mobile Call Button: Modern Oceanic Capsule (Clean white icon, no red) */}
-            <a
-              href={phoneTel}
-              aria-label={`Call office at ${phone}`}
-              className="sm:hidden inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-[#00529b] to-[#0072ce] hover:from-[#00427c] hover:to-[#005da8] text-white text-xs font-bold shadow-md border border-white/20 active:scale-95 transition-all"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <span>Call</span>
-            </a>
-
-            {/* Desktop Call Button: Ultra-Modern Gradient Pill with Live Pulse Dot & Clean White Icon (No red) */}
+          {/* Right Action: Desktop Call Button & Mobile Hamburger */}
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+            {/* Desktop Call Button: Ultra-Modern Gradient Pill with Live Pulse Dot & Clean White Icon */}
             <a
               href={phoneTel}
               className="hidden sm:inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-gradient-to-r from-[#00529b] via-[#0060b2] to-[#0072ce] hover:from-[#00427c] hover:via-[#005096] hover:to-[#005da8] text-white text-xs sm:text-sm font-bold shadow-lg shadow-sky-950/25 whitespace-nowrap border border-white/20 transition-all hover:scale-[1.02] active:scale-98"
