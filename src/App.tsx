@@ -23,12 +23,12 @@ const CLINIC = {
 
 export function App() {
   useEffect(() => {
-    document.documentElement.classList.add('dark')
-    document.body.style.backgroundColor = '#0b162c'
+    document.documentElement.classList.remove('dark')
+    document.body.style.backgroundColor = '#ffffff'
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#0b162c] text-slate-100 flex flex-col w-full pb-16 md:pb-0 font-sans selection:bg-sky-500 selection:text-white">
+    <div className="min-h-screen bg-white text-slate-900 flex flex-col w-full pb-16 md:pb-0 font-sans selection:bg-[#00529b] selection:text-white">
       {/* Real-time Office Hours & Emergency Banner */}
       <ClinicStatusBanner />
 
