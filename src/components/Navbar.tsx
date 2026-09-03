@@ -9,76 +9,146 @@ interface NavbarProps {
 
 export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!searchQuery.trim()) return
+    const q = searchQuery.toLowerCase()
+    if (q.includes('form') || q.includes('pdf') || q.includes('packet')) {
+      window.location.hash = '#forms'
+    } else if (q.includes('doc') || q.includes('ahmed') || q.includes('pediatrician') || q.includes('physician')) {
+      window.location.hash = '#physicians'
+    } else if (q.includes('insur') || q.includes('blue') || q.includes('medicare') || q.includes('medicaid')) {
+      window.location.hash = '#insurance'
+    } else if (q.includes('facil') || q.includes('map') || q.includes('locat') || q.includes('park')) {
+      window.location.hash = '#facility'
+    } else if (q.includes('appoint') || q.includes('contact') || q.includes('call') || q.includes('hour')) {
+      window.location.hash = '#contact'
+    } else {
+      window.location.hash = '#services'
+    }
+  }
 
   const navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'Physicians', href: '#physicians' },
-    { label: 'Services', href: '#services' },
-    { label: 'Patient Forms', href: '#forms', highlight: true },
-    { label: 'Insurance', href: '#insurance' },
-    { label: 'Facility', href: '#facility' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Find a Doctor', href: '#physicians', active: true },
+    { label: 'Pediatric Care', href: '#services' },
+    { label: 'Adult Primary Care', href: '#services' },
+    { label: 'Patient Forms (PDF)', href: '#forms' },
+    { label: 'Insurance Plans', href: '#insurance' },
+    { label: 'Location & Facility', href: '#facility' },
+    { label: 'Appointments', href: '#contact' },
   ]
 
   return (
-    <header className="sticky top-0 z-50 glass-header shadow-xl">
-      <div className="site-container h-20 sm:h-22 flex items-center justify-between gap-4">
-        {/* Brand Link */}
-        <a href="#home" className="flex items-center gap-3.5 group min-w-0" aria-label="High Springs Pediatrics Home">
-          <ClinicLogoEmblem />
-          <div className="flex flex-col justify-center min-w-0">
-            <div className="font-extrabold text-lg sm:text-2xl tracking-tight leading-tight whitespace-nowrap">
-              <span className="text-white">High Springs</span>{' '}
-              <span className="text-sky-400">Pediatrics</span>
-            </div>
-            <div className="text-[11px] sm:text-xs font-semibold text-slate-300 tracking-wider uppercase whitespace-nowrap">
-              &amp; Adult Primary Care
-            </div>
+    <header className="sticky top-0 z-50 shadow-2xl">
+      {/* ── 1. Top Institutional Utility Bar (UF Health Style) ── */}
+      <div className="bg-[#001736] border-b border-white/10 text-xs py-1.5 px-4 text-slate-300">
+        <div className="site-container flex items-center justify-between gap-4">
+          <div className="flex items-center gap-2 text-[11px]">
+            <span className="text-[#f47321]">📍</span>
+            <span className="font-semibold text-white">19228 NW US Highway 441, High Springs, FL</span>
           </div>
-        </a>
-
-        {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-1.5 text-sm font-medium text-slate-200" aria-label="Main Navigation">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className={`px-3.5 py-2 rounded-xl transition-all duration-200 ${
-                link.highlight
-                  ? 'text-sky-300 font-semibold bg-sky-500/10 hover:bg-sky-500/20 border border-sky-400/20'
-                  : 'hover:text-white hover:bg-slate-800/60'
-              }`}
-            >
-              {link.label}
+          <div className="flex items-center gap-4 text-[11px]">
+            <a href="#forms" className="hover:text-white transition-colors hidden sm:inline">
+              Download Intake Packets
             </a>
-          ))}
-        </nav>
+            <span className="text-slate-600 hidden sm:inline">|</span>
+            <a href={phoneTel} className="font-bold text-[#f47321] hover:text-[#fb923c] tabular-nums transition-colors">
+              Call Office: {phone}
+            </a>
+          </div>
+        </div>
+      </div>
 
-        {/* Action Button & Mobile Hamburger */}
-        <div className="flex items-center gap-2.5 sm:gap-3 flex-shrink-0">
-          <a
-            href={phoneTel}
-            className="btn-primary inline-flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-2.5 rounded-full bg-gradient-to-r from-sky-600 to-teal-600 hover:from-sky-500 hover:to-teal-500 text-white text-xs sm:text-sm font-bold shadow-md shadow-sky-900/30 whitespace-nowrap"
-            aria-label={`Call office at ${phone}`}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <span className="hidden sm:inline tabular-nums">{phone}</span>
-            <span className="sm:hidden">Call Clinic</span>
+      {/* ── 2. Primary Brand & Search Bar Header (UF Deep Navy #002147) ── */}
+      <div className="bg-[#002147] border-b border-white/10 py-3.5 px-4">
+        <div className="site-container flex items-center justify-between gap-4 sm:gap-6">
+          {/* Brand Logo & Name */}
+          <a href="#home" className="flex items-center gap-3.5 group min-w-0" aria-label="High Springs Pediatrics & Primary Care">
+            <ClinicLogoEmblem />
+            <div className="flex flex-col justify-center min-w-0">
+              <div className="font-extrabold text-xl sm:text-2xl md:text-3xl tracking-tight leading-tight whitespace-nowrap text-white">
+                High Springs <span className="text-[#38bdf8]">Pediatrics</span>
+              </div>
+              <div className="text-[10px] sm:text-xs font-bold text-slate-300 tracking-wider uppercase whitespace-nowrap flex items-center gap-1.5">
+                <span>&amp; Adult Primary Care</span>
+                <span className="text-[#f47321]">&bull;</span>
+                <span className="text-[#f47321] font-extrabold">North Florida</span>
+              </div>
+            </div>
           </a>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2.5 rounded-xl bg-slate-900/90 text-slate-200 hover:text-white border border-slate-700/80 transition-colors"
-            aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
-            aria-expanded={mobileMenuOpen}
+          {/* Quick Search Pill (Direct UF Health style) */}
+          <form
+            onSubmit={handleSearch}
+            className="hidden md:flex items-center bg-white rounded-full p-1 pl-4 shadow-lg border border-slate-200 w-full max-w-md"
           >
-            {mobileMenuOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.2"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.2"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
-            )}
-          </button>
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Find doctors, conditions, forms..."
+              className="w-full text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 outline-none bg-transparent"
+            />
+            <button
+              type="submit"
+              className="w-8 h-8 rounded-full bg-[#00529b] hover:bg-[#004182] text-white flex items-center justify-center flex-shrink-0 transition-colors shadow-sm cursor-pointer"
+              aria-label="Search site"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </button>
+          </form>
+
+          {/* Right Action Phone & Mobile Hamburger */}
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+            <a
+              href={phoneTel}
+              className="btn-primary inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-[#00529b] hover:bg-[#004182] text-white text-xs sm:text-sm font-bold shadow-md whitespace-nowrap border border-white/20"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-[#f47321]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span className="hidden sm:inline tabular-nums">{phone}</span>
+              <span className="sm:hidden">Call Clinic</span>
+            </a>
+
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-2 rounded-xl bg-[#001736] text-slate-200 hover:text-white border border-slate-700/80 transition-colors"
+              aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
+            >
+              {mobileMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+              )}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* ── 3. UF Blue Secondary Navigation Bar (Direct UF Health style) ── */}
+      <div className="hidden lg:block bg-[#00529b] border-t border-white/15 px-4 py-1.5 shadow-md">
+        <div className="site-container flex items-center justify-between">
+          <nav className="flex items-center gap-1 text-xs font-semibold text-white">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className={`px-3.5 py-2 rounded-lg transition-all ${
+                  link.active
+                    ? 'bg-white text-[#00529b] font-bold shadow-sm'
+                    : 'text-white/95 hover:bg-white/15 hover:text-white'
+                }`}
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+          
+          <div className="text-[11px] font-semibold text-sky-100 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span>Walk-In Sick Visits Welcome</span>
+          </div>
         </div>
       </div>
 
@@ -90,26 +160,40 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden border-t border-slate-800 bg-[#091428]/98 backdrop-blur-2xl px-4 py-5 shadow-2xl overflow-hidden"
+            className="lg:hidden border-t border-slate-700 bg-[#001736] px-4 py-5 shadow-2xl overflow-hidden"
           >
+            {/* Mobile Search */}
+            <form onSubmit={handleSearch} className="flex items-center bg-white rounded-full p-1 pl-3.5 mb-4">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search doctors, services, forms..."
+                className="w-full text-xs text-slate-900 outline-none"
+              />
+              <button type="submit" className="w-7 h-7 rounded-full bg-[#00529b] text-white flex items-center justify-center flex-shrink-0">
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </button>
+            </form>
+
             <div className="grid grid-cols-2 gap-2 mb-4">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center justify-between p-3 rounded-xl bg-slate-900/80 hover:bg-sky-600/20 text-xs font-semibold text-slate-100 border border-slate-800 transition-all"
+                  className="flex items-center justify-between p-3 rounded-xl bg-[#002147] hover:bg-[#00529b] text-xs font-semibold text-white border border-white/10 transition-all"
                 >
                   <span>{link.label}</span>
-                  <span className="text-sky-400">&rarr;</span>
+                  <span className="text-[#f47321]">&rarr;</span>
                 </a>
               ))}
             </div>
 
-            <div className="space-y-2 pt-3 border-t border-slate-800/80">
+            <div className="space-y-2 pt-3 border-t border-slate-700">
               <a
                 href={phoneTel}
-                className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm shadow-md"
+                className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[#00529b] hover:bg-[#004182] text-white font-bold text-sm shadow-md"
               >
                 Call Office: {phone}
               </a>

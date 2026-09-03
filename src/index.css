@@ -4,31 +4,20 @@
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-heading: 'Outfit', system-ui, -apple-system, sans-serif;
 
-  /* Clinical Sky & Ocean Palette */
-  --color-brand-50: #f0f9ff;
-  --color-brand-100: #e0f2fe;
-  --color-brand-200: #bae6fd;
-  --color-brand-300: #7dd3fc;
-  --color-brand-400: #38bdf8;
-  --color-brand-500: #0ea5e9;
-  --color-brand-600: #0284c7;
-  --color-brand-700: #0369a1;
-  --color-brand-800: #075985;
-  --color-brand-900: #0c4a6e;
+  /* UF Health Inspired Collegiate Medical Palette */
+  --color-uf-deep: #001736;
+  --color-uf-navy: #002147;
+  --color-uf-navy-light: #082d5c;
+  --color-uf-blue: #00529b;
+  --color-uf-blue-hover: #004380;
+  --color-uf-ocean: #0068ba;
+  --color-uf-sky: #38bdf8;
+  --color-uf-orange: #f47321;
+  --color-uf-orange-hover: #ea580c;
 
-  /* Reassuring Medical Teal */
-  --color-teal-50: #f0fdfa;
-  --color-teal-100: #ccfbf1;
+  /* Clinical Reassurance Palette */
   --color-teal-500: #14b8a6;
   --color-teal-600: #0d9488;
-  --color-teal-700: #0f766e;
-
-  /* Deep Calming Medical Navy Surfaces */
-  --color-navy-950: #060b17;
-  --color-navy-900: #0b162c;
-  --color-navy-850: #0f1f3b;
-  --color-navy-800: #14284b;
-  --color-navy-750: #1c3561;
 }
 
 /* ── Typography & Smooth Defaults ───────────────────── */
@@ -39,8 +28,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: #0b162c;
-  color: #f1f5f9;
+  background-color: #002147;
+  color: #f8fafc;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -49,7 +38,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   text-wrap: balance;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
 }
 
 .tabular-nums {
@@ -59,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ── Container Consistency ───────────────────────────── */
 .site-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1240px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.25rem;
@@ -68,37 +57,43 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 640px) {
   .site-container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
   }
+}
+
+/* ── UF Health Institutional Styling Utilities ───────── */
+.uf-gradient-hero {
+  background: linear-gradient(135deg, #001e40 0%, #002855 45%, #00457d 100%);
+}
+
+.uf-nav-bar {
+  background-color: #00529b;
+}
+
+.uf-search-pill {
+  background-color: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.25);
 }
 
 /* ── Glassmorphism & Elevation ────────────────────────── */
 .glass-header {
-  background: rgba(11, 22, 44, 0.88);
+  background: rgba(0, 33, 71, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .glass-card {
-  background: rgba(15, 31, 59, 0.7);
+  background: rgba(8, 45, 92, 0.65);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .glass-card:hover {
-  border-color: rgba(56, 189, 248, 0.35);
-}
-
-/* ── Subtle Ambient Glow (Replaces Harsh Box Glows) ───── */
-.ambient-glow-sky {
-  background: radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.12) 0%, transparent 70%);
-}
-
-.ambient-glow-teal {
-  background: radial-gradient(circle at 50% 0%, rgba(13, 148, 136, 0.12) 0%, transparent 70%);
+  border-color: rgba(56, 189, 248, 0.4);
 }
 
 /* ── Accessible Focus Rings ─────────────────────────── */
@@ -107,6 +102,6 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #38bdf8;
+  outline: 2px solid #f47321;
   outline-offset: 2px;
 }

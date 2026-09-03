@@ -4,62 +4,57 @@ import adultFormPdf from '../assets/adult_new_patient_form.pdf'
 
 export const PatientFormsSection = () => {
   return (
-    <section id="forms" className="py-16 sm:py-24 bg-[#0b162c] text-white relative">
+    <section id="forms" className="py-16 sm:py-24 bg-[#f8fafc] text-slate-900 relative border-b border-slate-200">
       <div className="site-container">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center max-w-3xl mx-auto mb-12 sm:mb-16"
-        >
-          <span className="inline-block px-3 py-1 rounded-full bg-sky-500/10 border border-sky-400/30 text-sky-300 text-xs font-semibold uppercase tracking-wider mb-3">
-            Save Waiting Room Time
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
-            Official Patient Registration Forms
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00529b]/10 border border-[#00529b]/20 text-[#00529b] text-xs font-bold uppercase tracking-wider mb-2.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#f47321]" />
+            <span>Save Waiting Room Time</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#002147] tracking-tight">
+            Official Patient Registration Packets
           </h2>
-          <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Download and complete your new patient packet before arriving at our High Springs office. Completing these forms in advance helps our clinical staff get your family into an exam room without delay.
+          <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-xl mx-auto leading-relaxed">
+            Download, print, and fill out your official medical intake forms in advance to speed up check-in at our High Springs office.
           </p>
-        </motion.div>
+        </div>
 
-        {/* 2 Primary Download Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto mb-12">
-          {/* Child Packet */}
+        {/* 2 White Medical Document Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-7 sm:gap-8 max-w-5xl mx-auto mb-12">
+          {/* Child Registration Card */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="bg-[#0f213f] rounded-3xl border border-slate-800 p-7 sm:p-9 flex flex-col justify-between med-card shadow-xl"
+            transition={{ duration: 0.45 }}
+            className="pro-med-card rounded-3xl border border-slate-200 p-7 sm:p-9 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all"
           >
             <div>
               <div className="flex items-center justify-between mb-5">
-                <div className="w-14 h-14 rounded-2xl bg-sky-500/15 border border-sky-400/30 text-sky-400 flex items-center justify-center text-2xl font-bold shadow-inner">
-                  👶
+                <div className="w-13 h-13 rounded-2xl bg-sky-50 border border-sky-200 text-[#00529b] flex items-center justify-center text-2xl shadow-sm">
+                  📄
                 </div>
-                <span className="px-3 py-1 rounded-full bg-sky-500/10 text-sky-300 text-xs font-bold border border-sky-400/20">
-                  Pediatrics &bull; Ages 0–18
+                <span className="px-3 py-1 rounded-full bg-sky-100 text-[#00529b] text-xs font-bold border border-sky-200">
+                  Pediatrics (Ages 0–18)
                 </span>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-extrabold text-white mb-2">
+              <h3 className="text-xl sm:text-2xl font-black text-[#002147] mb-2">
                 New Child Registration Packet (PDF)
               </h3>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
-                Complete intake document for newborns, infants, and youth under 18. Covers birth history, developmental milestones, immunization release, and parental treatment consent.
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                Official registration form for infants, children, and teens under 18. Includes full health history, parental consent, immunization records release, and insurance authorization.
               </p>
 
-              <div className="bg-slate-900/70 rounded-2xl p-4 border border-slate-800 mb-6 text-xs text-slate-300 space-y-1.5">
-                <div className="flex items-center gap-2 text-slate-200 font-semibold">
-                  <svg className="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Includes Medical History &amp; Consent
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200 mb-6 text-xs text-slate-700 space-y-2">
+                <div className="flex items-center gap-2">
+                  <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold">✓</span>
+                  <span className="font-semibold">Pediatric Medical History &amp; Consent</span>
                 </div>
-                <div className="flex items-center gap-2 text-slate-200 font-semibold">
-                  <svg className="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Standard PDF Format &bull; 2.0 MB
+                <div className="flex items-center gap-2">
+                  <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold">✓</span>
+                  <span>Standard Printable PDF &bull; 2.0 MB</span>
                 </div>
               </div>
             </div>
@@ -67,46 +62,46 @@ export const PatientFormsSection = () => {
             <a
               href={childPacketPdf}
               download="High_Springs_Pediatrics_Child_Packet.pdf"
-              className="btn-primary inline-flex items-center justify-center gap-2.5 w-full py-3.5 rounded-2xl bg-gradient-to-r from-sky-600 to-sky-500 hover:from-sky-500 hover:to-sky-400 text-white font-bold text-sm shadow-lg shadow-sky-900/30"
+              className="btn-uf-primary inline-flex items-center justify-center gap-2.5 w-full py-3.5 rounded-2xl text-white font-bold text-sm shadow-md"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
               Download Child Packet (PDF)
             </a>
           </motion.div>
 
-          {/* Adult Form */}
+          {/* Adult Registration Card */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-[#0f213f] rounded-3xl border border-slate-800 p-7 sm:p-9 flex flex-col justify-between med-card shadow-xl"
+            transition={{ duration: 0.45, delay: 0.1 }}
+            className="pro-med-card rounded-3xl border border-slate-200 p-7 sm:p-9 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all"
           >
             <div>
               <div className="flex items-center justify-between mb-5">
-                <div className="w-14 h-14 rounded-2xl bg-teal-500/15 border border-teal-400/30 text-teal-400 flex items-center justify-center text-2xl font-bold shadow-inner">
+                <div className="w-13 h-13 rounded-2xl bg-teal-50 border border-teal-200 text-teal-700 flex items-center justify-center text-2xl shadow-sm">
                   📋
                 </div>
-                <span className="px-3 py-1 rounded-full bg-teal-500/10 text-teal-300 text-xs font-bold border border-teal-400/20">
+                <span className="px-3 py-1 rounded-full bg-teal-100 text-teal-800 text-xs font-bold border border-teal-200">
                   Adult Care &bull; Dr. Ramin Ahmad
                 </span>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-extrabold text-white mb-2">
+              <h3 className="text-xl sm:text-2xl font-black text-[#002147] mb-2">
                 Adult New Patient Intake Form (PDF)
               </h3>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
-                Official adult intake for internal medicine and routine physicals. Covers cardiovascular screening, prior surgeries, chronic symptoms, and complete prescription medication review.
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                Official adult intake for internal medicine. Covers cardiovascular review, chronic symptom assessment, prior surgeries, and complete prescription medication reconciliation.
               </p>
 
-              <div className="bg-slate-900/70 rounded-2xl p-4 border border-slate-800 mb-6 text-xs text-slate-300 space-y-1.5">
-                <div className="flex items-center gap-2 text-slate-200 font-semibold">
-                  <svg className="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Medication &amp; Health Review
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200 mb-6 text-xs text-slate-700 space-y-2">
+                <div className="flex items-center gap-2">
+                  <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold">✓</span>
+                  <span className="font-semibold">Cardiovascular &amp; Medication Review</span>
                 </div>
-                <div className="flex items-center gap-2 text-slate-200 font-semibold">
-                  <svg className="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Standard PDF Format &bull; 1.7 MB
+                <div className="flex items-center gap-2">
+                  <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold">✓</span>
+                  <span>Standard Printable PDF &bull; 1.7 MB</span>
                 </div>
               </div>
             </div>
@@ -114,7 +109,7 @@ export const PatientFormsSection = () => {
             <a
               href={adultFormPdf}
               download="High_Springs_Primary_Care_Adult_Form.pdf"
-              className="btn-primary inline-flex items-center justify-center gap-2.5 w-full py-3.5 rounded-2xl bg-gradient-to-r from-teal-600 to-teal-500 hover:from-teal-500 hover:to-teal-400 text-white font-bold text-sm shadow-lg shadow-teal-900/30"
+              className="btn-uf-primary inline-flex items-center justify-center gap-2.5 w-full py-3.5 rounded-2xl text-white font-bold text-sm shadow-md"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
               Download Adult Form (PDF)
@@ -122,27 +117,27 @@ export const PatientFormsSection = () => {
           </motion.div>
         </div>
 
-        {/* First Visit Preparation Checklist */}
-        <div className="bg-[#081224] border border-slate-800/90 rounded-3xl p-6 sm:p-8 max-w-4xl mx-auto text-xs sm:text-sm text-slate-300">
-          <h4 className="text-base sm:text-lg font-bold text-white mb-3 flex items-center gap-2">
-            <span className="text-sky-400 text-xl">✓</span> What to Bring on the Day of Your Visit
+        {/* First Visit Checklist Bar */}
+        <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 max-w-4xl mx-auto shadow-sm">
+          <h4 className="text-base font-bold text-[#002147] mb-3 flex items-center gap-2">
+            <span className="text-[#f47321] text-lg">★</span> What to Bring with Your Form on Visit Day:
           </h4>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-            <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
-              <span className="font-bold text-white block mb-1">1. Photo ID</span>
-              <p className="text-[11px] text-slate-400">Driver license, state ID, or military identification.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3.5 mt-3">
+            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <span className="font-bold text-[#002147] text-xs block mb-1">1. Photo ID</span>
+              <p className="text-[11px] text-slate-500">Government driver license, state ID, or passport.</p>
             </div>
-            <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
-              <span className="font-bold text-white block mb-1">2. Insurance Card</span>
-              <p className="text-[11px] text-slate-400">Current commercial, Medicare, or Medicaid card.</p>
+            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <span className="font-bold text-[#002147] text-xs block mb-1">2. Insurance Card</span>
+              <p className="text-[11px] text-slate-500">Current commercial, Medicare, or Florida Medicaid card.</p>
             </div>
-            <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
-              <span className="font-bold text-white block mb-1">3. Vaccine Records</span>
-              <p className="text-[11px] text-slate-400">Childhood immunization booklet or state records.</p>
+            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <span className="font-bold text-[#002147] text-xs block mb-1">3. Vaccine Records</span>
+              <p className="text-[11px] text-slate-500">Childhood immunization booklet or state records.</p>
             </div>
-            <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
-              <span className="font-bold text-white block mb-1">4. Medication List</span>
-              <p className="text-[11px] text-slate-400">Prescription bottles or accurate dosage schedule.</p>
+            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <span className="font-bold text-[#002147] text-xs block mb-1">4. Medications</span>
+              <p className="text-[11px] text-slate-500">Prescription bottles or accurate daily schedule.</p>
             </div>
           </div>
         </div>
