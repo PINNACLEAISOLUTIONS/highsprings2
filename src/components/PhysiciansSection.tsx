@@ -16,6 +16,7 @@ export const PhysiciansSection = () => {
       badgeColor: 'bg-sky-50 text-[#00529b] border-sky-200',
       pdf: childPacketPdf,
       pdfLabel: 'Child Registration (PDF)',
+      isLightened: true,
       credentials: [
         'Residency: West Virginia University School of Medicine',
         'Fellowship Trained: Royal Hospitals, United Kingdom',
@@ -34,6 +35,7 @@ export const PhysiciansSection = () => {
       badgeColor: 'bg-teal-50 text-teal-800 border-teal-200',
       pdf: adultFormPdf,
       pdfLabel: 'Adult Intake Form (PDF)',
+      isLightened: false,
       credentials: [
         'Residency: University of Central Florida (UCF) / HCA Healthcare',
         'Active Hospital Staff Privileges: HCA Florida North Florida Hospital',
@@ -73,12 +75,14 @@ export const PhysiciansSection = () => {
               className="pro-med-card bg-white rounded-3xl border border-slate-200 overflow-hidden flex flex-col justify-between shadow-md hover:shadow-2xl transition-all group"
             >
               <div>
-                {/* Full-Width Doctor Image Header Spanning Across the Card (Matching Services Cards) */}
+                {/* Full-Width Doctor Image Header Spanning Across the Card */}
                 <div className="h-72 sm:h-84 md:h-96 w-full overflow-hidden relative bg-slate-100">
                   <img
                     src={doc.image}
                     alt={doc.name}
-                    className="w-full h-full object-cover object-top med-img group-hover:scale-105 transition-transform duration-500"
+                    className={`w-full h-full object-cover object-top med-img group-hover:scale-105 transition-transform duration-500 ${
+                      doc.isLightened ? 'brightness-[1.12] contrast-[1.03]' : ''
+                    }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#002147]/80 via-transparent to-black/30" />
 
@@ -101,11 +105,11 @@ export const PhysiciansSection = () => {
 
                 {/* Card Body with Enlarged Typography */}
                 <div className="p-6 sm:p-8">
-                  {/* Doctor Name - Noticeably Larger Font */}
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#002147] tracking-tight leading-tight mb-1.5">
+                  {/* Doctor Name - Scaled to the same prominent size as Compassionate Family Healthcare */}
+                  <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#002147] tracking-tight leading-[1.15] mb-2">
                     {doc.name}
                   </h3>
-                  <p className="text-sm sm:text-base font-bold text-[#00529b] mb-3">
+                  <p className="text-base sm:text-lg font-extrabold text-[#00529b] mb-3">
                     {doc.title}
                   </p>
 

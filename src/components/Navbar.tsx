@@ -55,10 +55,10 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
           >
             <ClinicLogoEmblem />
             <div className="flex flex-col justify-center min-w-0">
-              <div className="font-black text-lg sm:text-2xl md:text-3xl tracking-tight leading-none text-white whitespace-nowrap">
+              <div className="font-black text-xl xs:text-2xl sm:text-2xl md:text-3xl tracking-tight leading-none text-white whitespace-nowrap">
                 High Springs <span className="text-[#38bdf8]">Pediatrics</span>
               </div>
-              <div className="text-[11.5px] sm:text-xs md:text-sm font-bold text-slate-200 tracking-wide uppercase mt-1 whitespace-nowrap">
+              <div className="text-xs sm:text-xs md:text-sm font-bold text-slate-200 tracking-wide uppercase mt-1 whitespace-nowrap">
                 &amp; Adult Primary Care
               </div>
             </div>
