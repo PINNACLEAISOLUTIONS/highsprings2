@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Committed build output — CI (deploy.yml) rebuilds ./dist fresh on every push
+/assets
+/docs
