@@ -23,9 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 
-# Committed build output — CI (deploy.yml) rebuilds ./dist fresh on every push
+# Orphaned build output from repeated builds into the repo root (NOT the deploy)
 /assets
-/docs
+
+# NOTE: /docs is intentionally tracked — it is the GitHub Pages source
+# ("Deploy from branch: main /docs"). `npm run build` writes it.
 
 # local-only single-file preview tooling (not part of the Pages build)
 vite.config.preview.mts
