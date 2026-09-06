@@ -1,7 +1,7 @@
 export const ClinicLogoEmblem = () => (
   <div className="relative flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
     <div className="relative w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-b from-[#0f2752] to-[#08152e] border border-sky-400/60 shadow-md flex items-center justify-center p-1 sm:p-1.5">
-      <svg className="w-full h-full filter drop-shadow-[0_2px_6px_rgba(56,189,248,0.4)]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="High Springs Caring Star Emblem">
+      <svg className="w-full h-full filter drop-shadow-[0_2px_6px_rgba(56,189,248,0.4)]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
         <defs>
           <linearGradient id="careStarGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
             <stop stopColor="#0284c7" />

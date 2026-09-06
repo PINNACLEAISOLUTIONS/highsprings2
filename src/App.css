@@ -92,15 +92,16 @@
   transform: scale(0.98);
 }
 
+/* Darkened from #f97316 so white button text clears WCAG AA (4.5:1) */
 .btn-uf-orange {
-  background: #f97316;
+  background: #c2410c;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-uf-orange:hover {
-  background: #ea580c;
+  background: #9a3412;
   transform: translateY(-1px);
-  box-shadow: 0 8px 20px -4px rgba(249, 115, 22, 0.4);
+  box-shadow: 0 8px 20px -4px rgba(194, 65, 12, 0.4);
 }
 
 .btn-uf-orange:active {

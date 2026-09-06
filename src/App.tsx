@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { MotionConfig } from 'motion/react'
 import ClinicStatusBanner from './components/ClinicStatusBanner'
 import Navbar from './components/Navbar'
@@ -25,11 +24,6 @@ const CLINIC = {
 }
 
 export function App() {
-  useEffect(() => {
-    document.documentElement.classList.remove('dark')
-    document.body.style.backgroundColor = '#ffffff'
-  }, [])
-
   return (
     <MotionConfig reducedMotion="user">
     <div className="min-h-screen bg-white text-slate-900 flex flex-col w-full pb-16 md:pb-0 font-sans selection:bg-[#0f766e] selection:text-white">

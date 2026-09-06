@@ -103,9 +103,9 @@ export const InsuranceSection = () => {
           {/* Billing Reassurance Card */}
           <div className="bg-gradient-to-b from-white to-[#eef4f3] rounded-3xl p-6 sm:p-8 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
             <div>
-              <h4 className="text-base sm:text-lg font-bold text-[#134e48] mb-1">
+              <h3 className="text-base sm:text-lg font-bold text-[#134e48] mb-1">
                 Have a question about your specific plan or co-payment?
-              </h4>
+              </h3>
               <p className="text-xs sm:text-sm text-slate-600">
                 Our in-office insurance coordinator will check your eligibility, deductible, and co-payment prior to your visit.
               </p>

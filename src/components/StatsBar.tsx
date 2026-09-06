@@ -24,7 +24,7 @@ export const StatsBar = () => {
             >
               <div className="text-2xl sm:text-4xl font-black text-[#0f766e] flex items-center justify-center tabular-nums">
                 <CountUp to={stat.target} duration={1.5 + i * 0.15} />
-                <span className="text-[#f97316] ml-0.5">{stat.suffix}</span>
+                <span className="text-[#c2410c] ml-0.5">{stat.suffix}</span>
               </div>
               <div className="text-xs sm:text-sm font-bold text-[#134e48] mt-1">
                 {stat.label}

@@ -59,7 +59,6 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
             href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
             className="flex items-center gap-1.5 sm:gap-3 group min-w-0 flex-1 sm:flex-initial pl-0.5"
-            aria-label="High Springs Pediatrics & Adult Primary Care"
           >
             <ClinicLogoEmblem />
             <div className="flex flex-col justify-center min-w-0">

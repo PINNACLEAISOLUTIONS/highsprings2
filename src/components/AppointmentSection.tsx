@@ -145,10 +145,11 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="appt-name" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                       Patient / Parent Name *
                     </label>
                     <input
+                      id="appt-name"
                       type="text"
                       required
                       value={formData.name}
@@ -159,10 +160,11 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="appt-phone" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                       Phone Number *
                     </label>
                     <input
+                      id="appt-phone"
                       type="tel"
                       required
                       value={formData.phone}
@@ -175,10 +177,11 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="appt-physician" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                       Select Physician *
                     </label>
                     <select
+                      id="appt-physician"
                       value={formData.physician}
                       onChange={(e) => setFormData({ ...formData, physician: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:border-[#0f766e] focus:ring-2 focus:ring-[#0f766e]/20 outline-none transition-all cursor-pointer"
@@ -193,10 +196,11 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="appt-reason" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                       Visit Reason *
                     </label>
                     <select
+                      id="appt-reason"
                       value={formData.reason}
                       onChange={(e) => setFormData({ ...formData, reason: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:border-[#0f766e] focus:ring-2 focus:ring-[#0f766e]/20 outline-none transition-all cursor-pointer"
@@ -235,10 +239,11 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                  <label htmlFor="appt-notes" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                     Brief Notes or Symptoms (Optional)
                   </label>
                   <textarea
+                    id="appt-notes"
                     rows={2}
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
