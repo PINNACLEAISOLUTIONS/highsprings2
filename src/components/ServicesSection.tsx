@@ -131,7 +131,7 @@ export const ServicesSection = () => {
     : services.filter(s => s.category === activeTab || (activeTab === 'diagnostics' && (s.id === 'labs' || s.id === 'vaccines')))
 
   return (
-    <section id="services" className="py-16 sm:py-24 bg-[#f2f7f6] text-slate-900 relative border-b border-slate-200">
+    <section id="services" className="py-20 sm:py-28 lg:py-32 bg-gradient-to-b from-white to-[#eef4f3] text-slate-900 relative border-b border-slate-200">
       <div className="site-container">
         {/* Section Header (Matching UF Health "Common areas of care" style) */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">

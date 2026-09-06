@@ -4,7 +4,7 @@ import adultFormPdf from '../assets/adult_new_patient_form.pdf'
 
 export const PatientFormsSection = () => {
   return (
-    <section id="forms" className="py-16 sm:py-24 bg-[#f2f7f6] text-slate-900 relative border-b border-slate-200">
+    <section id="forms" className="py-20 sm:py-28 lg:py-32 bg-gradient-to-b from-white to-[#eef4f3] text-slate-900 relative border-b border-slate-200">
       <div className="site-container">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">

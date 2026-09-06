@@ -6,7 +6,7 @@ export const FacilityTourSection = () => {
   const mapsUrl = `https://maps.google.com/?q=${encodeURIComponent(address)}`
 
   return (
-    <section id="facility" className="py-16 sm:py-24 bg-[#f2f7f6] text-slate-900 relative border-b border-slate-200">
+    <section id="facility" className="py-20 sm:py-28 lg:py-32 bg-gradient-to-b from-white to-[#eef4f3] text-slate-900 relative border-b border-slate-200">
       <div className="site-container">
         <div className="max-w-6xl mx-auto">
           {/* Header */}

@@ -43,7 +43,7 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
   }
 
   return (
-    <section id="contact" className="py-16 sm:py-24 bg-[#134e48] text-white relative">
+    <section id="contact" className="py-20 sm:py-28 lg:py-32 bg-[#134e48] text-white relative">
       <div className="site-container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start max-w-6xl mx-auto">
           {/* Left: Contact Info & Hours */}

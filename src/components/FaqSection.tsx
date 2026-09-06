@@ -30,7 +30,7 @@ const faqs = [
 
 export const FaqSection = () => {
   return (
-    <section id="faq" className="py-16 sm:py-24 bg-white text-slate-900 relative border-b border-slate-200">
+    <section id="faq" className="py-20 sm:py-28 lg:py-32 bg-white text-slate-900 relative border-b border-slate-200">
       <div className="site-container">
         <div className="max-w-3xl mx-auto">
           {/* Header */}

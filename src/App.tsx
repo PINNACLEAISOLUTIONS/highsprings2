@@ -12,6 +12,7 @@ import FacilityTourSection from './components/FacilityTourSection'
 import AppointmentSection from './components/AppointmentSection'
 import FaqSection from './components/FaqSection'
 import MobileQuickBar from './components/MobileQuickBar'
+import StickyBookCta from './components/StickyBookCta'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -86,6 +87,9 @@ export function App() {
         phoneTel={CLINIC.phoneTel}
         address={CLINIC.address}
       />
+
+      {/* Desktop floating book CTA (appears past the hero) */}
+      <StickyBookCta />
     </div>
     </MotionConfig>
   )

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import ClinicLogoEmblem from './ClinicLogoEmblem'
 
@@ -9,6 +9,14 @@ interface NavbarProps {
 
 export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   // Clean nav links without "Find a Doctor"
   const navLinks = [
@@ -42,9 +50,9 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
   }
 
   return (
-    <header className="sticky top-0 z-50 shadow-2xl">
-      {/* ── Primary Brand Header (UF Deep Navy #134e48) ── */}
-      <div className="bg-[#134e48] border-b border-white/10 py-2.5 sm:py-3.5 px-2 sm:px-6">
+    <header className={`sticky top-0 z-50 transition-shadow duration-300 ${scrolled ? 'shadow-2xl' : 'shadow-sm'}`}>
+      {/* ── Primary Brand Header (UF Deep Navy #002147) ── */}
+      <div className={`bg-[#002147] border-b border-white/10 px-2 sm:px-6 transition-all duration-300 ${scrolled ? 'py-2 sm:py-2.5' : 'py-2.5 sm:py-3.5'}`}>
         <div className="site-container flex items-center justify-between gap-1.5 sm:gap-6">
           {/* Brand Logo & Name (Star shifted left on mobile, no "North Florida") */}
           <a
@@ -56,7 +64,7 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
             <ClinicLogoEmblem />
             <div className="flex flex-col justify-center min-w-0">
               <div className="font-black text-xl xs:text-2xl sm:text-2xl md:text-3xl tracking-tight leading-none text-white whitespace-nowrap">
-                High Springs <span className="text-[#5eead4]">Pediatrics</span>
+                High Springs <span className="text-[#38bdf8]">Pediatrics</span>
               </div>
               <div className="text-xs sm:text-xs md:text-sm font-bold text-slate-200 tracking-wide uppercase mt-1 whitespace-nowrap">
                 &amp; Adult Primary Care
@@ -69,7 +77,7 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
             {/* Desktop Call Button: Ultra-Modern Gradient Pill with Live Pulse Dot & Clean White Icon */}
             <a
               href={phoneTel}
-              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-gradient-to-r from-[#0f766e] via-[#0d9488] to-[#14b8a6] hover:from-[#115e59] hover:via-[#0d9488] hover:to-[#0d9488] text-white text-xs sm:text-sm font-bold shadow-lg shadow-teal-950/25 whitespace-nowrap border border-white/20 transition-all hover:scale-[1.02] active:scale-98"
+              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-gradient-to-r from-[#00529b] via-[#0060b2] to-[#0072ce] hover:from-[#00427c] hover:via-[#005096] hover:to-[#005da8] text-white text-xs sm:text-sm font-bold shadow-lg shadow-sky-950/25 whitespace-nowrap border border-white/20 transition-all hover:scale-[1.02] active:scale-98"
             >
               <span className="w-2 h-2 rounded-full bg-emerald-400 status-dot-pulse flex-shrink-0" />
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-white flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -79,7 +87,7 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
             {/* Mobile Hamburger Menu */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-xl bg-[#0c332f] text-slate-200 hover:text-white border border-slate-700/80 transition-colors cursor-pointer"
+              className="lg:hidden p-2 rounded-xl bg-[#001736] text-slate-200 hover:text-white border border-slate-700/80 transition-colors cursor-pointer"
               aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
             >
               {mobileMenuOpen ? (
@@ -93,7 +101,7 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
       </div>
 
       {/* ── Secondary Navigation Bar (Desktop Only) ── */}
-      <div className="hidden lg:block bg-[#0f766e] border-t border-white/15 px-4 py-1.5 shadow-md">
+      <div className="hidden lg:block bg-[#00529b] border-t border-white/15 px-4 py-1.5 shadow-md">
         <div className="site-container flex items-center justify-between">
           <nav className="flex items-center gap-1 text-xs font-semibold text-white">
             {navLinks.map((link) => (
@@ -108,7 +116,7 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
             ))}
           </nav>
 
-          <div className="flex items-center gap-3 text-xs text-teal-100 font-medium">
+          <div className="flex items-center gap-3 text-xs text-sky-100 font-medium">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 status-dot-pulse" />
             <span>Walk-In Sick Visits Welcome</span>
           </div>
@@ -123,7 +131,7 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden border-t border-slate-700 bg-[#0c332f] px-4 py-5 shadow-2xl overflow-hidden"
+            className="lg:hidden border-t border-slate-700 bg-[#001736] px-4 py-5 shadow-2xl overflow-hidden"
           >
             <div className="grid grid-cols-2 gap-2 mb-4">
               {navLinks.map((link) => (
@@ -131,7 +139,7 @@ export const Navbar = ({ phone, phoneTel }: NavbarProps) => {
                   key={link.label}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href, link.filter)}
-                  className="flex items-center justify-between p-3 rounded-xl bg-[#134e48] hover:bg-[#0f766e] text-xs font-semibold text-white border border-white/10 transition-all cursor-pointer"
+                  className="flex items-center justify-between p-3 rounded-xl bg-[#002147] hover:bg-[#00529b] text-xs font-semibold text-white border border-white/10 transition-all cursor-pointer"
                 >
                   <span>{link.label}</span>
                   <span className="text-slate-400 text-[10px]">&rarr;</span>

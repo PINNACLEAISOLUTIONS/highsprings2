@@ -26,3 +26,7 @@ dist-ssr
 # Committed build output — CI (deploy.yml) rebuilds ./dist fresh on every push
 /assets
 /docs
+
+# local-only single-file preview tooling (not part of the Pages build)
+vite.config.preview.mts
+/dist-preview
