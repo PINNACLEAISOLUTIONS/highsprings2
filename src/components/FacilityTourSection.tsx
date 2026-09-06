@@ -82,8 +82,8 @@ export const FacilityTourSection = () => {
                 transition={{ duration: 0.4 }}
                 className="pro-med-card rounded-3xl p-6 border border-slate-200 shadow-sm"
               >
-                <div className="w-10 h-10 rounded-2xl bg-teal-50 border border-teal-200 text-[#0f766e] flex items-center justify-center font-bold mb-3">
-                  ♿
+                <div className="w-10 h-10 rounded-2xl bg-teal-50 border border-teal-200 text-[#0f766e] flex items-center justify-center mb-3">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><circle cx="16" cy="4" r="1"/><path d="m18 19 1-7-6 1"/><path d="m5 8 3-3 5.5 3-2.36 3.5"/><path d="M4.24 14.5a5 5 0 0 0 6.88 6"/><path d="M13.76 17.5a5 5 0 0 0-6.88-6"/></svg>
                 </div>
                 <h4 className="text-base font-bold text-[#134e48] mb-1">Stroller &amp; Handicap Accessible</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
@@ -98,8 +98,8 @@ export const FacilityTourSection = () => {
                 transition={{ duration: 0.4, delay: 0.1 }}
                 className="pro-med-card rounded-3xl p-6 border border-slate-200 shadow-sm"
               >
-                <div className="w-10 h-10 rounded-2xl bg-teal-50 border border-teal-200 text-teal-700 flex items-center justify-center font-bold mb-3">
-                  🔬
+                <div className="w-10 h-10 rounded-2xl bg-teal-50 border border-teal-200 text-teal-700 flex items-center justify-center mb-3">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5V2"/><path d="M8.5 2h7"/><path d="M9.5 16h5"/></svg>
                 </div>
                 <h4 className="text-base font-bold text-[#134e48] mb-1">On-Site Diagnostic Suite</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
@@ -114,8 +114,8 @@ export const FacilityTourSection = () => {
                 transition={{ duration: 0.4, delay: 0.2 }}
                 className="pro-med-card rounded-3xl p-6 border border-slate-200 shadow-sm"
               >
-                <div className="w-10 h-10 rounded-2xl bg-amber-50 border border-amber-200 text-amber-700 flex items-center justify-center font-bold mb-3">
-                  🧸
+                <div className="w-10 h-10 rounded-2xl bg-amber-50 border border-amber-200 text-amber-700 flex items-center justify-center mb-3">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
                 </div>
                 <h4 className="text-base font-bold text-[#134e48] mb-1">Comfortable Family Environment</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">

@@ -122,7 +122,7 @@ export const PhysiciansSection = () => {
 
                   {/* Hospital Badge Pill */}
                   <div className={`p-3 rounded-xl border text-xs sm:text-sm font-semibold flex items-center gap-2.5 mb-6 ${doc.badgeColor}`}>
-                    <span className="text-lg">🏥</span>
+                    <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01"/><path d="M9 12v.01"/><path d="M9 15v.01"/><path d="M9 18v.01"/></svg>
                     <span>{doc.badgeText}</span>
                   </div>
 
@@ -134,8 +134,8 @@ export const PhysiciansSection = () => {
                     <ul className="space-y-3 text-xs sm:text-base text-slate-700">
                       {doc.credentials.map((cred, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <span className="w-5 h-5 rounded-full bg-teal-100 text-[#0f766e] flex items-center justify-center text-xs font-black flex-shrink-0 mt-0.5">
-                            ✓
+                          <span className="w-5 h-5 rounded-full bg-teal-100 text-[#0f766e] flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5"><polyline points="20 6 9 17 4 12"/></svg>
                           </span>
                           <span className="leading-snug">{cred}</span>
                         </li>

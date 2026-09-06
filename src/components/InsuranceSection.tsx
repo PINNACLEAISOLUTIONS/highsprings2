@@ -72,8 +72,8 @@ export const InsuranceSection = () => {
                 className="flex items-center justify-between p-4 rounded-2xl bg-slate-50/90 border border-slate-200/90 hover:border-[#0f766e]/40 hover:bg-white transition-all shadow-sm group"
               >
                 <div className="flex items-center gap-3 min-w-0">
-                  <div className="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 text-sm font-bold">
-                    ✓
+                  <div className="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"/></svg>
                   </div>
                   <div className="min-w-0">
                     <div className="font-bold text-sm text-[#134e48] group-hover:text-[#0f766e] transition-colors truncate">

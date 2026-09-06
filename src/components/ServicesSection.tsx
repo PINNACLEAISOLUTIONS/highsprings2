@@ -250,8 +250,8 @@ export const ServicesSection = () => {
                     <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700">
                       {svc.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-2.5">
-                          <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">
-                            ✓
+                          <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5"><polyline points="20 6 9 17 4 12"/></svg>
                           </span>
                           <span className="leading-snug">{feature}</span>
                         </li>

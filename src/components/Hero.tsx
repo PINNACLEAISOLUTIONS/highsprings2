@@ -13,17 +13,15 @@ export const Hero = ({ phone, phoneTel }: HeroProps) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-end">
           {/* Left Column: Authentic Clinic Headline & Actions */}
           <div className="lg:col-span-7 pb-12 lg:pb-20 text-left">
-            {/* Location Tag - Shifted to left to fit cleanly on mobile */}
+            {/* Status Tag */}
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
               className="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-white/10 border border-white/20 text-sky-200 text-[10.5px] sm:text-xs font-semibold mb-4 text-left max-w-full"
             >
-              <span className="text-[#38bdf8] flex-shrink-0 text-xs">📍</span>
-              <span className="leading-tight">
-                19228 NW US Hwy 441, High Springs &bull; Accepting New Patients
-              </span>
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 status-dot-pulse flex-shrink-0" />
+              <span className="leading-tight">Accepting New Patients</span>
             </motion.div>
 
             {/* Primary Headline */}

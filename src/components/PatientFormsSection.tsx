@@ -32,8 +32,8 @@ export const PatientFormsSection = () => {
           >
             <div>
               <div className="flex items-center justify-between mb-5">
-                <div className="w-13 h-13 rounded-2xl bg-teal-50 border border-teal-200 text-[#0f766e] flex items-center justify-center text-2xl shadow-sm">
-                  📄
+                <div className="w-13 h-13 rounded-2xl bg-teal-50 border border-teal-200 text-[#0f766e] flex items-center justify-center shadow-sm">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                 </div>
                 <span className="px-3 py-1 rounded-full bg-teal-100 text-[#0f766e] text-xs font-bold border border-teal-200">
                   Pediatrics (Ages 0–18)
@@ -49,11 +49,11 @@ export const PatientFormsSection = () => {
 
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200 mb-6 text-xs text-slate-700 space-y-2">
                 <div className="flex items-center gap-2">
-                  <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold">✓</span>
+                  <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0"><svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span className="font-semibold">Pediatric Medical History &amp; Consent</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold">✓</span>
+                  <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0"><svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span>Standard Printable PDF &bull; 2.0 MB</span>
                 </div>
               </div>
@@ -79,8 +79,8 @@ export const PatientFormsSection = () => {
           >
             <div>
               <div className="flex items-center justify-between mb-5">
-                <div className="w-13 h-13 rounded-2xl bg-teal-50 border border-teal-200 text-teal-700 flex items-center justify-center text-2xl shadow-sm">
-                  📋
+                <div className="w-13 h-13 rounded-2xl bg-teal-50 border border-teal-200 text-teal-700 flex items-center justify-center shadow-sm">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M9 2h6a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/></svg>
                 </div>
                 <span className="px-3 py-1 rounded-full bg-teal-100 text-teal-800 text-xs font-bold border border-teal-200">
                   Adult Care &bull; Dr. Ramin Ahmad
@@ -96,11 +96,11 @@ export const PatientFormsSection = () => {
 
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200 mb-6 text-xs text-slate-700 space-y-2">
                 <div className="flex items-center gap-2">
-                  <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold">✓</span>
+                  <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0"><svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span className="font-semibold">Cardiovascular &amp; Medication Review</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold">✓</span>
+                  <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0"><svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span>Standard Printable PDF &bull; 1.7 MB</span>
                 </div>
               </div>
@@ -120,7 +120,7 @@ export const PatientFormsSection = () => {
         {/* First Visit Checklist Bar */}
         <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 max-w-4xl mx-auto shadow-sm">
           <h4 className="text-base font-bold text-[#134e48] mb-3 flex items-center gap-2">
-            <span className="text-[#f97316] text-lg">★</span> What to Bring with Your Form on Visit Day:
+            <svg className="w-5 h-5 text-[#f97316] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg> What to Bring with Your Form on Visit Day:
           </h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3.5 mt-3">
             <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80">

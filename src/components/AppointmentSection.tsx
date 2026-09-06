@@ -108,8 +108,8 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
                 animate={{ opacity: 1, scale: 1 }}
                 className="bg-emerald-50 border border-emerald-200 rounded-2xl p-8 text-center"
               >
-                <div className="w-14 h-14 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                  ✓
+                <div className="w-14 h-14 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-[#134e48] mb-2">
                   Appointment Request Received
