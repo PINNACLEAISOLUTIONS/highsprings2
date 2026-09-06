@@ -80,6 +80,8 @@ export const PhysiciansSection = () => {
                   <img
                     src={doc.image}
                     alt={doc.name}
+                    loading="lazy"
+                    decoding="async"
                     className={`w-full h-full object-cover object-top med-img group-hover:scale-105 transition-transform duration-500 ${
                       doc.isLightened ? 'brightness-[1.12] contrast-[1.03]' : ''
                     }`}

@@ -8,6 +8,10 @@ interface AppointmentSectionProps {
   address: string
 }
 
+// ponytail: mailto handoff — no server, no spam filtering, needs a mail client.
+// Upgrade path: POST formData to a Formspree/Web3Forms endpoint and drop the mailto.
+const CLINIC_EMAIL = 'frontdesk@highspringspediatrics.com' // TODO: confirm real inbox
+
 export const AppointmentSection = ({ phone, phoneTel, hours, address }: AppointmentSectionProps) => {
   const [submitted, setSubmitted] = useState(false)
   const [formData, setFormData] = useState({
@@ -22,6 +26,19 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    const body = [
+      `Name: ${formData.name}`,
+      `Phone: ${formData.phone}`,
+      `Email: ${formData.email || '—'}`,
+      `Physician: ${formData.physician}`,
+      `Reason: ${formData.reason}`,
+      `Preferred time: ${formData.preferredTime}`,
+      '',
+      `Notes: ${formData.notes || '—'}`,
+    ].join('\n')
+    const subject = `Appointment request — ${formData.name || 'New patient'}`
+    window.location.href =
+      `mailto:${CLINIC_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     setSubmitted(true)
   }
 

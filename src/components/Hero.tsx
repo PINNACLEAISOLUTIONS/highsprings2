@@ -111,6 +111,8 @@ export const Hero = ({ phone, phoneTel }: HeroProps) => {
               <img
                 src={heroUfImg}
                 alt="Doctor consulting with patient in High Springs clinic"
+                fetchPriority="high"
+                decoding="async"
                 className="w-full max-w-[500px] h-auto object-contain object-bottom filter drop-shadow-2xl"
               />
             </div>

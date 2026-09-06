@@ -1,4 +1,6 @@
 import { useEffect } from 'react'
+import { MotionConfig } from 'motion/react'
+import ClinicStatusBanner from './components/ClinicStatusBanner'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import StatsBar from './components/StatsBar'
@@ -8,6 +10,7 @@ import PatientFormsSection from './components/PatientFormsSection'
 import InsuranceSection from './components/InsuranceSection'
 import FacilityTourSection from './components/FacilityTourSection'
 import AppointmentSection from './components/AppointmentSection'
+import FaqSection from './components/FaqSection'
 import MobileQuickBar from './components/MobileQuickBar'
 import Footer from './components/Footer'
 import './App.css'
@@ -27,7 +30,11 @@ export function App() {
   }, [])
 
   return (
+    <MotionConfig reducedMotion="user">
     <div className="min-h-screen bg-white text-slate-900 flex flex-col w-full pb-16 md:pb-0 font-sans selection:bg-[#00529b] selection:text-white">
+      {/* Live Open/Closed status strip */}
+      <ClinicStatusBanner />
+
       {/* Modern Sticky Navigation */}
       <Navbar phone={CLINIC.phone} phoneTel={CLINIC.phoneTel} />
 
@@ -54,6 +61,9 @@ export function App() {
         {/* Clinic Facility Tour & Google Maps Access */}
         <FacilityTourSection />
 
+        {/* Common Questions (mirrors FAQPage structured data) */}
+        <FaqSection />
+
         {/* Direct Appointment Request & Phone Desk */}
         <AppointmentSection
           phone={CLINIC.phone}
@@ -77,6 +87,7 @@ export function App() {
         address={CLINIC.address}
       />
     </div>
+    </MotionConfig>
   )
 }
 
