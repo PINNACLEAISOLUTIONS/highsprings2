@@ -58,7 +58,7 @@ export const ClinicStatusBanner = () => {
   }, [])
 
   return (
-    <div className="bg-[#071124] border-b border-slate-800/80 text-xs py-2 px-4">
+    <div className="bg-[#07201d] border-b border-slate-800/80 text-xs py-2 px-4">
       <div className="site-container flex flex-wrap items-center justify-between gap-2 text-slate-300">
         <div className="flex items-center gap-2">
           <span className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-semibold text-[11px] ${
@@ -82,7 +82,7 @@ export const ClinicStatusBanner = () => {
           <span className="text-slate-600 hidden md:inline">|</span>
           <a
             href="tel:3864541156"
-            className="text-sky-400 hover:text-sky-300 font-bold tabular-nums transition-colors hidden md:inline"
+            className="text-teal-400 hover:text-teal-300 font-bold tabular-nums transition-colors hidden md:inline"
           >
             Direct: (386) 454-1156
           </a>

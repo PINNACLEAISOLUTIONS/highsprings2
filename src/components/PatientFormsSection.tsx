@@ -4,15 +4,15 @@ import adultFormPdf from '../assets/adult_new_patient_form.pdf'
 
 export const PatientFormsSection = () => {
   return (
-    <section id="forms" className="py-16 sm:py-24 bg-[#f8fafc] text-slate-900 relative border-b border-slate-200">
+    <section id="forms" className="py-16 sm:py-24 bg-[#f2f7f6] text-slate-900 relative border-b border-slate-200">
       <div className="site-container">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00529b]/10 border border-[#00529b]/20 text-[#00529b] text-xs font-bold uppercase tracking-wider mb-2.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#f47321]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0f766e]/10 border border-[#0f766e]/20 text-[#0f766e] text-xs font-bold uppercase tracking-wider mb-2.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#f97316]" />
             <span>Save Waiting Room Time</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#002147] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#134e48] tracking-tight">
             Official Patient Registration Packets
           </h2>
           <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-xl mx-auto leading-relaxed">
@@ -32,15 +32,15 @@ export const PatientFormsSection = () => {
           >
             <div>
               <div className="flex items-center justify-between mb-5">
-                <div className="w-13 h-13 rounded-2xl bg-sky-50 border border-sky-200 text-[#00529b] flex items-center justify-center text-2xl shadow-sm">
+                <div className="w-13 h-13 rounded-2xl bg-teal-50 border border-teal-200 text-[#0f766e] flex items-center justify-center text-2xl shadow-sm">
                   📄
                 </div>
-                <span className="px-3 py-1 rounded-full bg-sky-100 text-[#00529b] text-xs font-bold border border-sky-200">
+                <span className="px-3 py-1 rounded-full bg-teal-100 text-[#0f766e] text-xs font-bold border border-teal-200">
                   Pediatrics (Ages 0–18)
                 </span>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-black text-[#002147] mb-2">
+              <h3 className="text-xl sm:text-2xl font-black text-[#134e48] mb-2">
                 New Child Registration Packet (PDF)
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
@@ -87,7 +87,7 @@ export const PatientFormsSection = () => {
                 </span>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-black text-[#002147] mb-2">
+              <h3 className="text-xl sm:text-2xl font-black text-[#134e48] mb-2">
                 Adult New Patient Intake Form (PDF)
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
@@ -119,24 +119,24 @@ export const PatientFormsSection = () => {
 
         {/* First Visit Checklist Bar */}
         <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 max-w-4xl mx-auto shadow-sm">
-          <h4 className="text-base font-bold text-[#002147] mb-3 flex items-center gap-2">
-            <span className="text-[#f47321] text-lg">★</span> What to Bring with Your Form on Visit Day:
+          <h4 className="text-base font-bold text-[#134e48] mb-3 flex items-center gap-2">
+            <span className="text-[#f97316] text-lg">★</span> What to Bring with Your Form on Visit Day:
           </h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3.5 mt-3">
             <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80">
-              <span className="font-bold text-[#002147] text-xs block mb-1">1. Photo ID</span>
+              <span className="font-bold text-[#134e48] text-xs block mb-1">1. Photo ID</span>
               <p className="text-[11px] text-slate-500">Government driver license, state ID, or passport.</p>
             </div>
             <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80">
-              <span className="font-bold text-[#002147] text-xs block mb-1">2. Insurance Card</span>
+              <span className="font-bold text-[#134e48] text-xs block mb-1">2. Insurance Card</span>
               <p className="text-[11px] text-slate-500">Current commercial, Medicare, or Florida Medicaid card.</p>
             </div>
             <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80">
-              <span className="font-bold text-[#002147] text-xs block mb-1">3. Vaccine Records</span>
+              <span className="font-bold text-[#134e48] text-xs block mb-1">3. Vaccine Records</span>
               <p className="text-[11px] text-slate-500">Childhood immunization booklet or state records.</p>
             </div>
             <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80">
-              <span className="font-bold text-[#002147] text-xs block mb-1">4. Medications</span>
+              <span className="font-bold text-[#134e48] text-xs block mb-1">4. Medications</span>
               <p className="text-[11px] text-slate-500">Prescription bottles or accurate daily schedule.</p>
             </div>
           </div>

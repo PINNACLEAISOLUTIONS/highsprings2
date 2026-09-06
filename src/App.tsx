@@ -31,7 +31,7 @@ export function App() {
 
   return (
     <MotionConfig reducedMotion="user">
-    <div className="min-h-screen bg-white text-slate-900 flex flex-col w-full pb-16 md:pb-0 font-sans selection:bg-[#00529b] selection:text-white">
+    <div className="min-h-screen bg-white text-slate-900 flex flex-col w-full pb-16 md:pb-0 font-sans selection:bg-[#0f766e] selection:text-white">
       {/* Live Open/Closed status strip */}
       <ClinicStatusBanner />
 

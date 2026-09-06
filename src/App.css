@@ -11,14 +11,14 @@
 
 .pro-med-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 30px -10px rgba(0, 82, 155, 0.12),
-              0 8px 16px -4px rgba(0, 33, 71, 0.06);
-  border-color: rgba(0, 82, 155, 0.4);
+  box-shadow: 0 20px 30px -10px rgba(15, 118, 110, 0.12),
+              0 8px 16px -4px rgba(19, 78, 72, 0.06);
+  border-color: rgba(15, 118, 110, 0.4);
 }
 
 .pro-med-card:hover .med-icon-box {
   transform: scale(1.1) rotate(2deg);
-  background-color: #00529b;
+  background-color: #0f766e;
   color: #ffffff;
 }
 
@@ -78,14 +78,14 @@
 
 /* Clean Button Micro-interactions */
 .btn-uf-primary {
-  background: #00529b;
+  background: #0f766e;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-uf-primary:hover {
-  background: #003d75;
+  background: #115e59;
   transform: translateY(-1px);
-  box-shadow: 0 8px 20px -4px rgba(0, 82, 155, 0.4);
+  box-shadow: 0 8px 20px -4px rgba(15, 118, 110, 0.4);
 }
 
 .btn-uf-primary:active {
@@ -93,14 +93,14 @@
 }
 
 .btn-uf-orange {
-  background: #f47321;
+  background: #f97316;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-uf-orange:hover {
   background: #ea580c;
   transform: translateY(-1px);
-  box-shadow: 0 8px 20px -4px rgba(244, 115, 33, 0.4);
+  box-shadow: 0 8px 20px -4px rgba(249, 115, 22, 0.4);
 }
 
 .btn-uf-orange:active {

@@ -35,11 +35,11 @@ export const FaqSection = () => {
         <div className="max-w-3xl mx-auto">
           {/* Header */}
           <div className="text-center mb-10 sm:mb-14">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00529b]/10 border border-[#00529b]/20 text-[#00529b] text-xs font-bold uppercase tracking-wider mb-2.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#f47321]" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0f766e]/10 border border-[#0f766e]/20 text-[#0f766e] text-xs font-bold uppercase tracking-wider mb-2.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#f97316]" />
               <span>Before You Call</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#002147] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#134e48] tracking-tight">
               Frequently Asked Questions
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-xl mx-auto leading-relaxed">
@@ -60,9 +60,9 @@ export const FaqSection = () => {
                 key={item.q}
                 className="group pro-med-card rounded-2xl border border-slate-200 shadow-sm px-5 sm:px-6 py-1 open:shadow-md"
               >
-                <summary className="flex items-center justify-between gap-4 py-4 cursor-pointer list-none font-bold text-sm sm:text-base text-[#002147]">
+                <summary className="flex items-center justify-between gap-4 py-4 cursor-pointer list-none font-bold text-sm sm:text-base text-[#134e48]">
                   <span>{item.q}</span>
-                  <span className="w-6 h-6 flex-shrink-0 rounded-full bg-[#00529b]/10 text-[#00529b] flex items-center justify-center transition-transform duration-300 group-open:rotate-45">
+                  <span className="w-6 h-6 flex-shrink-0 rounded-full bg-[#0f766e]/10 text-[#0f766e] flex items-center justify-center transition-transform duration-300 group-open:rotate-45">
                     <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
                   </span>
                 </summary>
@@ -76,7 +76,7 @@ export const FaqSection = () => {
           {/* Fallback CTA */}
           <p className="text-center text-xs sm:text-sm text-slate-500 mt-8">
             Still have a question?{' '}
-            <a href="tel:3864541156" className="text-[#00529b] font-bold underline">
+            <a href="tel:3864541156" className="text-[#0f766e] font-bold underline">
               Call our office at (386) 454-1156
             </a>
             .

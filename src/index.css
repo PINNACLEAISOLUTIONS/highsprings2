@@ -5,14 +5,14 @@
   --font-heading: 'Outfit', system-ui, -apple-system, sans-serif;
 
   /* UF Health Inspired Collegiate Medical Palette */
-  --color-uf-deep: #001736;
-  --color-uf-navy: #002147;
+  --color-uf-deep: #0c332f;
+  --color-uf-navy: #134e48;
   --color-uf-navy-light: #082d5c;
-  --color-uf-blue: #00529b;
-  --color-uf-blue-hover: #004380;
-  --color-uf-ocean: #0068ba;
-  --color-uf-sky: #38bdf8;
-  --color-uf-orange: #f47321;
+  --color-uf-blue: #0f766e;
+  --color-uf-blue-hover: #115e59;
+  --color-uf-ocean: #0d9488;
+  --color-uf-sky: #5eead4;
+  --color-uf-orange: #f97316;
   --color-uf-orange-hover: #ea580c;
 
   /* Clinical Reassurance Palette */
@@ -28,7 +28,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: #002147;
+  background-color: #134e48;
   color: #f8fafc;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -64,11 +64,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── UF Health Institutional Styling Utilities ───────── */
 .uf-gradient-hero {
-  background: linear-gradient(135deg, #001e40 0%, #002855 45%, #00457d 100%);
+  background: linear-gradient(135deg, #0c4a45 0%, #0f5c54 45%, #115e59 100%);
 }
 
 .uf-nav-bar {
-  background-color: #00529b;
+  background-color: #0f766e;
 }
 
 .uf-search-pill {
@@ -79,21 +79,21 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Glassmorphism & Elevation ────────────────────────── */
 .glass-header {
-  background: rgba(0, 33, 71, 0.95);
+  background: rgba(19, 78, 72, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .glass-card {
-  background: rgba(8, 45, 92, 0.65);
+  background: rgba(12, 59, 55, 0.65);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .glass-card:hover {
-  border-color: rgba(56, 189, 248, 0.4);
+  border-color: rgba(94, 234, 212, 0.4);
 }
 
 /* ── Accessible Focus Rings ─────────────────────────── */
@@ -102,7 +102,7 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #f47321;
+  outline: 2px solid #f97316;
   outline-offset: 2px;
 }
 

@@ -20,13 +20,13 @@ export const StatsBar = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="bg-slate-50/90 rounded-2xl p-4 sm:p-5 text-center border border-slate-200/80 med-card flex flex-col items-center justify-center h-full shadow-sm hover:border-[#00529b]/40 hover:shadow-md transition-all"
+              className="bg-slate-50/90 rounded-2xl p-4 sm:p-5 text-center border border-slate-200/80 med-card flex flex-col items-center justify-center h-full shadow-sm hover:border-[#0f766e]/40 hover:shadow-md transition-all"
             >
-              <div className="text-2xl sm:text-4xl font-black text-[#00529b] flex items-center justify-center tabular-nums">
+              <div className="text-2xl sm:text-4xl font-black text-[#0f766e] flex items-center justify-center tabular-nums">
                 <CountUp to={stat.target} duration={1.5 + i * 0.15} />
-                <span className="text-[#f47321] ml-0.5">{stat.suffix}</span>
+                <span className="text-[#f97316] ml-0.5">{stat.suffix}</span>
               </div>
-              <div className="text-xs sm:text-sm font-bold text-[#002147] mt-1">
+              <div className="text-xs sm:text-sm font-bold text-[#134e48] mt-1">
                 {stat.label}
               </div>
               <div className="text-[11px] text-slate-500 mt-0.5 hidden sm:block">

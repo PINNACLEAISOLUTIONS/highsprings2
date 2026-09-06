@@ -8,7 +8,7 @@ interface HeroProps {
 
 export const Hero = ({ phone, phoneTel }: HeroProps) => {
   return (
-    <section id="home" className="relative bg-gradient-to-r from-[#072c56] via-[#093566] to-[#143963] text-white pt-6 sm:pt-10 lg:pt-12 pb-0 overflow-hidden border-b border-white/10">
+    <section id="home" className="relative bg-gradient-to-r from-[#0c4a45] via-[#115e59] to-[#0f766e] text-white pt-6 sm:pt-10 lg:pt-12 pb-0 overflow-hidden border-b border-white/10">
       <div className="site-container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-end">
           {/* Left Column: Authentic Clinic Headline & Actions */}
@@ -18,9 +18,9 @@ export const Hero = ({ phone, phoneTel }: HeroProps) => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-white/10 border border-white/20 text-sky-200 text-[10.5px] sm:text-xs font-semibold mb-4 text-left max-w-full"
+              className="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-white/10 border border-white/20 text-teal-200 text-[10.5px] sm:text-xs font-semibold mb-4 text-left max-w-full"
             >
-              <span className="text-[#38bdf8] flex-shrink-0 text-xs">📍</span>
+              <span className="text-[#5eead4] flex-shrink-0 text-xs">📍</span>
               <span className="leading-tight">
                 19228 NW US Hwy 441, High Springs &bull; Accepting New Patients
               </span>
@@ -34,7 +34,7 @@ export const Hero = ({ phone, phoneTel }: HeroProps) => {
               className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12] mb-3.5 max-w-2xl"
             >
               Compassionate Family Healthcare{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-teal-200 to-sky-100">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-teal-200 to-teal-100">
                 For Every Generation
               </span>
             </motion.h1>
@@ -67,7 +67,7 @@ export const Hero = ({ phone, phoneTel }: HeroProps) => {
                 href={phoneTel}
                 className="btn-uf-primary inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-white font-bold text-sm sm:text-base border border-white/20 shadow-md whitespace-nowrap cursor-pointer transition-all tabular-nums"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-[#f47321]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-[#f97316]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 <span>Call: {phone}</span>
               </a>
             </motion.div>
@@ -93,7 +93,7 @@ export const Hero = ({ phone, phoneTel }: HeroProps) => {
               </a>
               <a
                 href="#forms"
-                className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-sky-200 font-semibold transition-colors"
+                className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-teal-200 font-semibold transition-colors"
               >
                 📄 Intake Forms (PDF)
               </a>

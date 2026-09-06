@@ -43,13 +43,13 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
   }
 
   return (
-    <section id="contact" className="py-16 sm:py-24 bg-[#002147] text-white relative">
+    <section id="contact" className="py-16 sm:py-24 bg-[#134e48] text-white relative">
       <div className="site-container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start max-w-6xl mx-auto">
           {/* Left: Contact Info & Hours */}
           <div className="lg:col-span-5">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-sky-200 text-xs font-bold uppercase tracking-wider mb-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#f47321]" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-teal-200 text-xs font-bold uppercase tracking-wider mb-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#f97316]" />
               <span>Direct Office Access</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
@@ -61,22 +61,22 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
 
             <div className="space-y-4 sm:space-y-5">
               {/* Phone */}
-              <div className="flex items-start gap-4 p-5 rounded-2xl bg-[#001736] border border-white/10">
-                <div className="w-12 h-12 rounded-2xl bg-[#00529b] text-white flex items-center justify-center flex-shrink-0 shadow-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-[#f47321]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div className="flex items-start gap-4 p-5 rounded-2xl bg-[#0c332f] border border-white/10">
+                <div className="w-12 h-12 rounded-2xl bg-[#0f766e] text-white flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-[#f97316]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 </div>
                 <div>
                   <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Telephone Desk</div>
-                  <a href={phoneTel} className="text-xl sm:text-2xl font-black text-white hover:text-[#f47321] tabular-nums transition-colors">
+                  <a href={phoneTel} className="text-xl sm:text-2xl font-black text-white hover:text-[#f97316] tabular-nums transition-colors">
                     {phone}
                   </a>
-                  <div className="text-xs text-sky-200 mt-0.5 font-medium">Guaranteed same-day sick visits for children</div>
+                  <div className="text-xs text-teal-200 mt-0.5 font-medium">Guaranteed same-day sick visits for children</div>
                 </div>
               </div>
 
               {/* Hours */}
-              <div className="flex items-start gap-4 p-5 rounded-2xl bg-[#001736] border border-white/10">
-                <div className="w-12 h-12 rounded-2xl bg-[#00529b] text-white flex items-center justify-center flex-shrink-0 shadow-sm">
+              <div className="flex items-start gap-4 p-5 rounded-2xl bg-[#0c332f] border border-white/10">
+                <div className="w-12 h-12 rounded-2xl bg-[#0f766e] text-white flex items-center justify-center flex-shrink-0 shadow-sm">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                 </div>
                 <div>
@@ -87,9 +87,9 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
               </div>
 
               {/* Location */}
-              <div className="flex items-start gap-4 p-5 rounded-2xl bg-[#001736] border border-white/10">
-                <div className="w-12 h-12 rounded-2xl bg-[#00529b] text-white flex items-center justify-center flex-shrink-0 shadow-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-[#f47321]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div className="flex items-start gap-4 p-5 rounded-2xl bg-[#0c332f] border border-white/10">
+                <div className="w-12 h-12 rounded-2xl bg-[#0f766e] text-white flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-[#f97316]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
                 <div>
                   <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Clinic Address</div>
@@ -111,7 +111,7 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
                 <div className="w-14 h-14 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                   ✓
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-[#002147] mb-2">
+                <h3 className="text-xl sm:text-2xl font-bold text-[#134e48] mb-2">
                   Appointment Request Received
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-700 leading-relaxed max-w-md mx-auto mb-6">
@@ -135,11 +135,11 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-black text-[#002147] mb-1">
+                  <h3 className="text-xl sm:text-2xl font-black text-[#134e48] mb-1">
                     Request an Appointment Online
                   </h3>
                   <p className="text-xs text-slate-600 mb-4">
-                    Or call our triage desk at <a href={phoneTel} className="text-[#00529b] font-bold underline">{phone}</a> for immediate same-day needs.
+                    Or call our triage desk at <a href={phoneTel} className="text-[#0f766e] font-bold underline">{phone}</a> for immediate same-day needs.
                   </p>
                 </div>
 
@@ -154,7 +154,7 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="Full legal name"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:border-[#00529b] focus:ring-2 focus:ring-[#00529b]/20 outline-none transition-all placeholder:text-slate-400"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:border-[#0f766e] focus:ring-2 focus:ring-[#0f766e]/20 outline-none transition-all placeholder:text-slate-400"
                     />
                   </div>
 
@@ -168,7 +168,7 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="(386) 000-0000"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:border-[#00529b] focus:ring-2 focus:ring-[#00529b]/20 outline-none transition-all placeholder:text-slate-400"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:border-[#0f766e] focus:ring-2 focus:ring-[#0f766e]/20 outline-none transition-all placeholder:text-slate-400"
                     />
                   </div>
                 </div>
@@ -181,7 +181,7 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
                     <select
                       value={formData.physician}
                       onChange={(e) => setFormData({ ...formData, physician: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:border-[#00529b] focus:ring-2 focus:ring-[#00529b]/20 outline-none transition-all cursor-pointer"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:border-[#0f766e] focus:ring-2 focus:ring-[#0f766e]/20 outline-none transition-all cursor-pointer"
                     >
                       <option value="Dr. Nasir Ahmed, M.D. (Pediatrics & Newborns Ages 0–18)">
                         Dr. Nasir Ahmed, M.D. (Pediatrics 0–18)
@@ -199,7 +199,7 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
                     <select
                       value={formData.reason}
                       onChange={(e) => setFormData({ ...formData, reason: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:border-[#00529b] focus:ring-2 focus:ring-[#00529b]/20 outline-none transition-all cursor-pointer"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:border-[#0f766e] focus:ring-2 focus:ring-[#0f766e]/20 outline-none transition-all cursor-pointer"
                     >
                       <option>Wellness Checkup / Physical</option>
                       <option>Same-Day Sick Visit (Fever, Cough, Earache)</option>
@@ -224,7 +224,7 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
                         onClick={() => setFormData({ ...formData, preferredTime: time })}
                         className={`py-2.5 px-3 rounded-xl text-xs font-bold border transition-all text-center cursor-pointer ${
                           formData.preferredTime === time
-                            ? 'bg-[#00529b] border-[#00529b] text-white shadow-sm'
+                            ? 'bg-[#0f766e] border-[#0f766e] text-white shadow-sm'
                             : 'bg-slate-50 border-slate-300 text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                         }`}
                       >
@@ -243,13 +243,13 @@ export const AppointmentSection = ({ phone, phoneTel, hours, address }: Appointm
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                     placeholder="Tell us about any specific symptoms or questions..."
-                    className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:border-[#00529b] focus:ring-2 focus:ring-[#00529b]/20 outline-none transition-all placeholder:text-slate-400 resize-none"
+                    className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:border-[#0f766e] focus:ring-2 focus:ring-[#0f766e]/20 outline-none transition-all placeholder:text-slate-400 resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="btn-uf-primary w-full py-4 rounded-xl text-white font-extrabold text-sm sm:text-base shadow-lg shadow-[#00529b]/20 transition-all cursor-pointer"
+                  className="btn-uf-primary w-full py-4 rounded-xl text-white font-extrabold text-sm sm:text-base shadow-lg shadow-[#0f766e]/20 transition-all cursor-pointer"
                 >
                   Submit Appointment Request
                 </button>

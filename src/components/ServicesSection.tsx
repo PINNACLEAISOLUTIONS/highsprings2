@@ -26,10 +26,10 @@ export const ServicesSection = () => {
       subtitle: 'Dr. Nasir Ahmed, M.D.',
       badge: 'Ages 0–18',
       tag: 'Same-Day Sick Care',
-      tagColor: 'bg-sky-100 text-[#00529b] border-sky-200',
+      tagColor: 'bg-teal-100 text-[#0f766e] border-teal-200',
       img: newbornCareImg,
-      iconBg: 'bg-sky-50 text-[#00529b] border-sky-200',
-      accentColor: '#00529b',
+      iconBg: 'bg-teal-50 text-[#0f766e] border-teal-200',
+      accentColor: '#0f766e',
       iconSvg: (
         <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 2a5 5 0 0 0-5 5v2a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z" />
@@ -80,7 +80,7 @@ export const ServicesSection = () => {
       tagColor: 'bg-blue-100 text-blue-800 border-blue-200',
       img: vaccinationsImg,
       iconBg: 'bg-blue-50 text-blue-700 border-blue-200',
-      accentColor: '#0284c7',
+      accentColor: '#0d9488',
       iconSvg: (
         <svg className="w-6 h-6 float-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -131,16 +131,16 @@ export const ServicesSection = () => {
     : services.filter(s => s.category === activeTab || (activeTab === 'diagnostics' && (s.id === 'labs' || s.id === 'vaccines')))
 
   return (
-    <section id="services" className="py-16 sm:py-24 bg-[#f8fafc] text-slate-900 relative border-b border-slate-200">
+    <section id="services" className="py-16 sm:py-24 bg-[#f2f7f6] text-slate-900 relative border-b border-slate-200">
       <div className="site-container">
         {/* Section Header (Matching UF Health "Common areas of care" style) */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00529b]/10 border border-[#00529b]/20 text-[#00529b] text-xs font-bold uppercase tracking-wider mb-2.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#f47321]" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0f766e]/10 border border-[#0f766e]/20 text-[#0f766e] text-xs font-bold uppercase tracking-wider mb-2.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#f97316]" />
               <span>Dedicated Family Medicine</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#002147] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#134e48] tracking-tight">
               Common Areas of Care
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-2xl leading-relaxed">
@@ -161,8 +161,8 @@ export const ServicesSection = () => {
                 onClick={() => setActiveTab(tab.id as any)}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                   activeTab === tab.id
-                    ? 'bg-[#00529b] text-white shadow-sm'
-                    : 'text-slate-600 hover:text-[#002147] hover:bg-slate-100'
+                    ? 'bg-[#0f766e] text-white shadow-sm'
+                    : 'text-slate-600 hover:text-[#134e48] hover:bg-slate-100'
                 }`}
               >
                 {tab.label}
@@ -199,7 +199,7 @@ export const ServicesSection = () => {
                     <span className={`px-3 py-1 rounded-full text-xs font-bold border shadow-sm backdrop-blur-md bg-white/95 ${svc.tagColor}`}>
                       {svc.tag}
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-[#002147]/90 text-white text-[11px] font-bold shadow-sm backdrop-blur-md border border-white/20">
+                    <span className="px-3 py-1 rounded-full bg-[#134e48]/90 text-white text-[11px] font-bold shadow-sm backdrop-blur-md border border-white/20">
                       {svc.badge}
                     </span>
                   </div>
@@ -211,7 +211,7 @@ export const ServicesSection = () => {
                         <path
                           className="ekg-wave"
                           d="M0 20 H180 L195 5 L210 35 L225 10 L240 28 L250 20 H500"
-                          stroke="#38bdf8"
+                          stroke="#5eead4"
                           strokeWidth="2.5"
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -229,10 +229,10 @@ export const ServicesSection = () => {
                       {svc.iconSvg}
                     </div>
                     <div>
-                      <span className="text-xs font-bold text-[#00529b] uppercase tracking-wider block">
+                      <span className="text-xs font-bold text-[#0f766e] uppercase tracking-wider block">
                         {svc.subtitle}
                       </span>
-                      <h3 className="text-xl sm:text-2xl font-black text-[#002147] tracking-tight leading-snug">
+                      <h3 className="text-xl sm:text-2xl font-black text-[#134e48] tracking-tight leading-snug">
                         {svc.title}
                       </h3>
                     </div>
@@ -265,7 +265,7 @@ export const ServicesSection = () => {
               <div className="p-6 pt-0 sm:p-8 sm:pt-0">
                 <a
                   href="#contact"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-100 hover:bg-[#00529b] text-[#002147] hover:text-white text-xs sm:text-sm font-bold border border-slate-200 hover:border-[#00529b] transition-all group-hover:shadow-md"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-100 hover:bg-[#0f766e] text-[#134e48] hover:text-white text-xs sm:text-sm font-bold border border-slate-200 hover:border-[#0f766e] transition-all group-hover:shadow-md"
                 >
                   <span>Request Appointment for This Service</span>
                   <span className="transition-transform group-hover:translate-x-1">&rarr;</span>

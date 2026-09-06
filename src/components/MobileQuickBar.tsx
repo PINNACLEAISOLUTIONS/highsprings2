@@ -7,7 +7,7 @@ export const MobileQuickBar = ({ phoneTel, address }: MobileQuickBarProps) => {
   const mapsUrl = `https://maps.google.com/?q=${encodeURIComponent(address)}`
 
   return (
-    <aside aria-label="Mobile Quick Actions" className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#060e1d]/95 backdrop-blur-xl border-t border-slate-800/90 py-2.5 px-3 flex items-center justify-around shadow-[0_-10px_25px_rgba(0,0,0,0.5)]">
+    <aside aria-label="Mobile Quick Actions" className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#061a17]/95 backdrop-blur-xl border-t border-slate-800/90 py-2.5 px-3 flex items-center justify-around shadow-[0_-10px_25px_rgba(0,0,0,0.5)]">
       <a
         href={phoneTel}
         className="flex flex-col items-center gap-1 text-[11px] font-bold text-emerald-400 active:scale-95 transition-transform"
@@ -21,10 +21,10 @@ export const MobileQuickBar = ({ phoneTel, address }: MobileQuickBarProps) => {
 
       <a
         href="#physicians"
-        className="flex flex-col items-center gap-1 text-[11px] font-bold text-sky-400 active:scale-95 transition-transform"
+        className="flex flex-col items-center gap-1 text-[11px] font-bold text-teal-400 active:scale-95 transition-transform"
         aria-label="View physicians"
       >
-        <div className="w-8 h-8 rounded-full bg-sky-500/20 flex items-center justify-center">
+        <div className="w-8 h-8 rounded-full bg-teal-500/20 flex items-center justify-center">
           <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </div>
         <span>Doctors</span>

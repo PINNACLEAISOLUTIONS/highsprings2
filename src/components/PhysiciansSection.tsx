@@ -13,7 +13,7 @@ export const PhysiciansSection = () => {
       ages: 'Ages 0 – 18',
       image: drNasirImg,
       badgeText: '20+ Years Caring for North Central Florida Families',
-      badgeColor: 'bg-sky-50 text-[#00529b] border-sky-200',
+      badgeColor: 'bg-teal-50 text-[#0f766e] border-teal-200',
       pdf: childPacketPdf,
       pdfLabel: 'Child Registration (PDF)',
       isLightened: true,
@@ -51,11 +51,11 @@ export const PhysiciansSection = () => {
       <div className="site-container">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#00529b]/10 border border-[#00529b]/20 text-[#00529b] text-xs font-bold uppercase tracking-wider mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#f47321]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0f766e]/10 border border-[#0f766e]/20 text-[#0f766e] text-xs font-bold uppercase tracking-wider mb-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#f97316]" />
             <span>Two Generations of Trusted Clinical Care</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#002147] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#134e48] tracking-tight">
             Meet Our Attending Physicians
           </h2>
           <p className="text-base sm:text-lg text-slate-600 mt-3 max-w-xl mx-auto leading-relaxed">
@@ -86,14 +86,14 @@ export const PhysiciansSection = () => {
                       doc.isLightened ? 'brightness-[1.12] contrast-[1.03]' : ''
                     }`}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#002147]/80 via-transparent to-black/30" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#134e48]/80 via-transparent to-black/30" />
 
                   {/* Floating Badges Across Top */}
                   <div className="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
-                    <span className="px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[#00529b] text-xs sm:text-sm font-extrabold shadow-md border border-white/30">
+                    <span className="px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[#0f766e] text-xs sm:text-sm font-extrabold shadow-md border border-white/30">
                       {doc.specialty}
                     </span>
-                    <span className="px-3.5 py-1.5 rounded-full bg-[#002147]/90 text-white text-xs sm:text-sm font-bold shadow-md backdrop-blur-md border border-white/20">
+                    <span className="px-3.5 py-1.5 rounded-full bg-[#134e48]/90 text-white text-xs sm:text-sm font-bold shadow-md backdrop-blur-md border border-white/20">
                       {doc.ages}
                     </span>
                   </div>
@@ -108,10 +108,10 @@ export const PhysiciansSection = () => {
                 {/* Card Body with Enlarged Typography */}
                 <div className="p-6 sm:p-8">
                   {/* Doctor Name - Scaled to the same prominent size as Compassionate Family Healthcare */}
-                  <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#002147] tracking-tight leading-[1.15] mb-2">
+                  <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#134e48] tracking-tight leading-[1.15] mb-2">
                     {doc.name}
                   </h3>
-                  <p className="text-base sm:text-lg font-extrabold text-[#00529b] mb-3">
+                  <p className="text-base sm:text-lg font-extrabold text-[#0f766e] mb-3">
                     {doc.title}
                   </p>
 
@@ -134,7 +134,7 @@ export const PhysiciansSection = () => {
                     <ul className="space-y-3 text-xs sm:text-base text-slate-700">
                       {doc.credentials.map((cred, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <span className="w-5 h-5 rounded-full bg-sky-100 text-[#00529b] flex items-center justify-center text-xs font-black flex-shrink-0 mt-0.5">
+                          <span className="w-5 h-5 rounded-full bg-teal-100 text-[#0f766e] flex items-center justify-center text-xs font-black flex-shrink-0 mt-0.5">
                             ✓
                           </span>
                           <span className="leading-snug">{cred}</span>
@@ -158,7 +158,7 @@ export const PhysiciansSection = () => {
                   download
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs sm:text-sm font-bold border border-slate-200 transition-colors"
                 >
-                  <svg className="w-4 h-4 text-[#00529b]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+                  <svg className="w-4 h-4 text-[#0f766e]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
                   <span>{doc.pdfLabel}</span>
                 </a>
               </div>

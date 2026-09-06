@@ -6,16 +6,16 @@ export const FacilityTourSection = () => {
   const mapsUrl = `https://maps.google.com/?q=${encodeURIComponent(address)}`
 
   return (
-    <section id="facility" className="py-16 sm:py-24 bg-[#f8fafc] text-slate-900 relative border-b border-slate-200">
+    <section id="facility" className="py-16 sm:py-24 bg-[#f2f7f6] text-slate-900 relative border-b border-slate-200">
       <div className="site-container">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00529b]/10 border border-[#00529b]/20 text-[#00529b] text-xs font-bold uppercase tracking-wider mb-2.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#f47321]" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0f766e]/10 border border-[#0f766e]/20 text-[#0f766e] text-xs font-bold uppercase tracking-wider mb-2.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#f97316]" />
               <span>Modern Clinical Facility</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#002147] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#134e48] tracking-tight">
               Comfortable, Accessible Family Care
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-2xl mx-auto leading-relaxed">
@@ -42,7 +42,7 @@ export const FacilityTourSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <span className="text-xs font-semibold text-white/90 bg-[#002147]/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                  <span className="text-xs font-semibold text-white/90 bg-[#134e48]/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
                     Freestanding Clinic Building &bull; High Springs, FL
                   </span>
                 </div>
@@ -51,11 +51,11 @@ export const FacilityTourSection = () => {
               <div className="p-6 sm:p-7 bg-white">
                 <div className="flex items-center justify-between gap-4 flex-wrap">
                   <div>
-                    <h3 className="text-xl font-bold text-[#002147] mb-1">
+                    <h3 className="text-xl font-bold text-[#134e48] mb-1">
                       High Springs Medical Practice
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 flex items-center gap-1.5">
-                      <svg className="w-4 h-4 text-[#00529b] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                      <svg className="w-4 h-4 text-[#0f766e] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                       <span>{address}</span>
                     </p>
                   </div>
@@ -82,10 +82,10 @@ export const FacilityTourSection = () => {
                 transition={{ duration: 0.4 }}
                 className="pro-med-card rounded-3xl p-6 border border-slate-200 shadow-sm"
               >
-                <div className="w-10 h-10 rounded-2xl bg-sky-50 border border-sky-200 text-[#00529b] flex items-center justify-center font-bold mb-3">
+                <div className="w-10 h-10 rounded-2xl bg-teal-50 border border-teal-200 text-[#0f766e] flex items-center justify-center font-bold mb-3">
                   ♿
                 </div>
-                <h4 className="text-base font-bold text-[#002147] mb-1">Stroller &amp; Handicap Accessible</h4>
+                <h4 className="text-base font-bold text-[#134e48] mb-1">Stroller &amp; Handicap Accessible</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
                   Zero stairs, smooth ground-level entry, wide doors, and dedicated ADA handicap parking directly in front of the clinic doors.
                 </p>
@@ -101,7 +101,7 @@ export const FacilityTourSection = () => {
                 <div className="w-10 h-10 rounded-2xl bg-teal-50 border border-teal-200 text-teal-700 flex items-center justify-center font-bold mb-3">
                   🔬
                 </div>
-                <h4 className="text-base font-bold text-[#002147] mb-1">On-Site Diagnostic Suite</h4>
+                <h4 className="text-base font-bold text-[#134e48] mb-1">On-Site Diagnostic Suite</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
                   CLIA-waived in-office laboratory testing for rapid strep, flu, COVID, urinalysis, EKG, and blood glucose without leaving the clinic.
                 </p>
@@ -117,7 +117,7 @@ export const FacilityTourSection = () => {
                 <div className="w-10 h-10 rounded-2xl bg-amber-50 border border-amber-200 text-amber-700 flex items-center justify-center font-bold mb-3">
                   🧸
                 </div>
-                <h4 className="text-base font-bold text-[#002147] mb-1">Comfortable Family Environment</h4>
+                <h4 className="text-base font-bold text-[#134e48] mb-1">Comfortable Family Environment</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
                   Warm, calm reception area with private clinical rooms thoroughly sanitized between every single patient appointment.
                 </p>
